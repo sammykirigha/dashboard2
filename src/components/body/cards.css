@@ -1,0 +1,122 @@
+.card-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    color: #103B66;
+    /* border: 2px solid #103B66; */
+}
+
+.card-main {
+     opacity: 1;
+     width: 100%; 
+     height: 100vh;
+     margin-top: -35px; 
+     display: flex; 
+     justify-content: space-between
+}
+
+.card-first-div {
+    display: flex;
+    align-content: space-between;
+}
+
+.card-content1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.card-content-span1{
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #103B66;
+    font-family: Noto Sans HK;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.card-content-span2{
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #666666;
+    font-family: Noto Sans HK;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.card-content2 {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    padding-top: 20px;
+}
+
+.card-content2 h2{
+    margin-left: 10px;
+    font-size: 25px; 
+    color: #103B66;
+    font-weight: 500
+}
+
+.orders {
+    display: flex;
+    flex-direction: column;
+}
+
+.orders-down{
+    margin-top: 25px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    display: flex;
+    align-items: flex-end;
+    text-decoration-line: underline;
+    color: #21B8F9;
+    margin-right: 45px;
+}
+
+.orders-up {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.orders-up-section1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-family: Noto Sans HK;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 22px;
+    color: #6C7C8C;
+}
+
+.orders-up-section2{
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-family: Noto Sans HK;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 22px;
+    color: #6C7C8C;
+}
