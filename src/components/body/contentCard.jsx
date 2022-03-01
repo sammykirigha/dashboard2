@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 
 export default function MediaCard({children}) {
   return (
-    <Card sx={{ maxHeight: 200}} >
+    <Card sx={{ maxHeight: 330}} >
         {children}
     </Card>
   );

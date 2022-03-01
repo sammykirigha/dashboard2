@@ -77,12 +77,6 @@ const ListContainer = ({ handleDrawerClose }) => {
                     </Typography>
                 </ListItemContent>
                 <ListItemContent icon={<PersonIcon />} text={"Customers"} />
-                <ListItemContent
-                    icon={<WifiTetheringIcon />}
-                    text={"Marketing"}
-                >
-                    <ArrowDropDownIcon />
-                </ListItemContent>
                 <Accordion sx={{ boxShadow: "none", margin: 0 }}>
                     <AccordionSummary
                         aria-controls="panel2a-content"

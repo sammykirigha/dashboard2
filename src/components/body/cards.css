@@ -120,3 +120,336 @@
     line-height: 22px;
     color: #6C7C8C;
 }
+
+.config-text {
+    font-family: Noto Sans HK;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #103B66;
+}
+
+.complete-box {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 39px;
+    display: flex;
+    flex-direction: column;
+    color: #FFA26B;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.config-paragraph {
+    font-family: Noto Sans HK;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #103B66;
+    width: 100%;
+}
+
+.config-link {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #21B8F9;
+    cursor: pointer;
+}
+
+.trust-pilot {
+    background: #000032;
+    box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.08), 0px 4px 8px rgba(50, 50, 71, 0.06);
+    border-radius: 10px;
+}
+
+.trust-text {
+    font-family: Noto Sans HK;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #ffffff
+}
+
+.trust-paragraph {
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.trust-link {
+    padding: 20px 0px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #00C48C;
+}
+
+.icon-box {
+    display: flex;
+     align-items: center; 
+     padding-top: 15px; 
+     padding-left: 15px;
+}
+
+.trust-icon {
+    height: 23px; 
+    width: 23px;
+    margin-right: 0px;
+    color: #005128;
+}
+
+.invite-paragraph {
+    padding: 20px 0px;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.customer-box {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.add-box {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    background: #F3A35C;
+    box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.08), 0px 4px 8px rgba(50, 50, 71, 0.06);
+    border-radius: 10px;
+}
+
+.add-body {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+}
+
+.add-text-box{
+width: 50%;
+font-family: Noto Sans HK;
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 27px;
+color: #FFFFFF;
+
+}
+
+.add-link {
+    display: flex;
+    margin-top: 30px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.add-image-box{
+    width: 50%;
+
+}
+
+.images {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.exten-main {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exten-box {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.exten-box2 {
+    padding-right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.exten-icon {
+width: 102px;
+height: 100px;
+background: #FFA26B;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.exten-icon2 {
+    width: 102px;
+    height: 100px;
+    background: #00C48C;
+    border-radius: 10px;
+    display: flex;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0px;
+    }
+
+.exten-text {
+font-family: Source Sans Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+line-height: 20px;
+color: #103B66;
+}
+
+.news-box {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-icon {
+margin-right: 10px;
+color: #103B66
+}
+
+.news-text1 {
+font-family: Noto Sans HK;
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 27px;
+display: flex;
+align-items: center;
+color: #103B66;
+}
+
+.news-text2 {
+margin-right: 10px;
+font-family: Source Sans Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+line-height: 20px;
+display: flex;
+align-items: center;
+text-align: right;
+text-decoration-line: underline;
+color: #21B8F9;
+cursor: pointer;
+}
+
+.news-body{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-image {
+    
+}
+
+.image {
+    height: 75px;
+    width: 75px;
+    border-radius: 4px;
+}
+
+.news-info {
+    cursor: pointer;
+    margin-left: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3px;
+}
+
+.news-h6 {
+font-family: Noto Sans HK;
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 13px;
+text-transform: uppercase;
+color: #21B8F9;
+}
+
+.news-paragraph {
+font-family: Noto Sans HK;
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 20px;
+color: #103B66;
+}
+
+.news-link {
+font-family: Noto Sans HK;
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 12px;
+text-decoration-line: underline;
+color: #103B66;
+}
