@@ -1,23 +1,36 @@
-.card-header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center
-}
 
 .icon {
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     color: #103B66;
-    /* border: 2px solid #103B66; */
 }
 
-.card-main {
-     opacity: 1;
-     width: 100%; 
-     height: 100vh;
-     margin-top: -35px; 
-     display: flex; 
-     justify-content: space-between
+.icon2 {
+    color: #666666;
+    width: 23px;
+    height: 23px;
+
+}
+
+.visitors-number {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px !important;
+    line-height: 61px;
+    display: flex;
+    align-items: center;
+    color: #103B66;
+}
+
+.visitors-info {
+    padding: 10px;
+    color: #21B8F9;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .card-first-div {
@@ -25,87 +38,45 @@
     align-content: space-between;
 }
 
-.card-content1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center
-}
-
-.card-content-span1{
-    margin-left: 10px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #103B66;
-    font-family: Noto Sans HK;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 25px;
-    display: flex;
-    align-items: center;
-}
-
-.card-content-span2{
-    margin-left: 10px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #666666;
-    font-family: Noto Sans HK;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-}
-
-.card-content2 {
-    display: flex;
-    flex-direction: column; 
-    width: 100%;
-    padding-top: 20px;
-}
-
-.card-content2 h2{
-    margin-left: 10px;
-    font-size: 25px; 
-    color: #103B66;
-    font-weight: 500
-}
-
 .orders {
     display: flex;
     flex-direction: column;
-}
-
-.orders-down{
-    margin-top: 25px;
-    font-family: Source Sans Pro;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 20px;
-    display: flex;
-    align-items: flex-end;
-    text-decoration-line: underline;
-    color: #21B8F9;
-    margin-right: 45px;
 }
 
 .orders-up {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    padding: 10px;
 }
 
 .orders-up-section1 {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    font-family: Noto Sans HK;
+}
+
+.orders-received {
+    font-family: Roboto !important;
     font-style: normal;
     font-weight: normal;
-    font-size: 17px;
+    font-size: 17px !important;
     line-height: 22px;
+    display: flex;
+    align-items: center;
     color: #6C7C8C;
+}
+
+.orders-quantity {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500 !important;
+    font-size: 17px !important;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #103B66;
 }
 
 .orders-up-section2{
@@ -121,11 +92,22 @@
     color: #6C7C8C;
 }
 
+.orders-down{
+    padding: 10px;
+    color: #21B8F9;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
 .config-text {
-    font-family: Noto Sans HK;
+    font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
-    font-size: 22px;
+    font-weight: 500 !important;
+    font-size: 22px !important;
     line-height: 27px;
     display: flex;
     align-items: center;
@@ -133,10 +115,10 @@
 }
 
 .complete-box {
-    font-family: Source Sans Pro;
+    font-family: Roboto;
     font-style: normal;
     font-weight: 600;
-    font-size: 34px;
+    font-size: 34px !important;
     line-height: 39px;
     display: flex;
     flex-direction: column;
@@ -146,22 +128,23 @@
 }
 
 .config-paragraph {
-    font-family: Noto Sans HK;
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 17px;
-    line-height: 22px;
+    font-size: 17px !important;
+    line-height: 22px !important;
     display: flex;
     align-items: center;
     color: #103B66;
-    width: 100%;
+    /* width: 80%; */
 }
 
 .config-link {
-    font-family: Source Sans Pro;
+    padding: 10px;
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 17px;
+    font-size: 14px !important;
     line-height: 20px;
     display: flex;
     align-items: center;
@@ -178,22 +161,22 @@
 }
 
 .trust-text {
-    font-family: Noto Sans HK;
+    font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    line-height: 27px !important;
     display: flex;
     align-items: center;
     color: #ffffff
 }
 
 .trust-paragraph {
-    font-family: Noto Sans KR;
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 17px;
-    line-height: 22px;
+    font-size: 17px !important;
+    line-height: 22px !important;
     display: flex;
     align-items: center;
     color: #FFFFFF;
@@ -201,16 +184,17 @@
 
 .trust-link {
     padding: 20px 0px;
-    font-family: Source Sans Pro;
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 17px;
-    line-height: 20px;
+    font-size: 17px !important;
+    line-height: 20px !important;
     display: flex;
     align-items: center;
     text-align: center;
     text-decoration-line: underline;
     color: #00C48C;
+    cursor: pointer;
 }
 
 .icon-box {
@@ -227,16 +211,28 @@
     color: #005128;
 }
 
+
 .invite-paragraph {
-    padding: 20px 0px;
-    font-family: Noto Sans KR;
+    margin: 20px 0px;
+    font-family: Roboto;
+    font-size: 17px !important;
+    line-height: 22px !important;
+    color: black;
+}
+
+.invite-link {
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 17px;
-    line-height: 22px;
+    font-size: 17px !important;
+    line-height: 20px;
     display: flex;
     align-items: center;
-    color: black;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #21B8F9;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .customer-box {
@@ -246,6 +242,32 @@
     justify-content: flex-start;
     align-items: center;
 }
+
+.customer-text {
+    margin-left: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px !important;
+    line-height: 24px !important;
+    display: flex;
+    align-items: center;
+    color: #103B66;
+}
+
+.customer-button {
+    width: 150px;
+    height: 40px;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 16px !important;
+    background: #21B8F9;
+    outline: 0 !important;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 
 .add-box {
     display: flex;
@@ -257,6 +279,7 @@
 }
 
 .add-body {
+width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: flex-start;
@@ -264,42 +287,99 @@ align-items: flex-start;
 
 .add-text-box{
 width: 50%;
-font-family: Noto Sans HK;
-font-style: normal;
-font-weight: 500;
-font-size: 22px;
-line-height: 27px;
-color: #FFFFFF;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
 
 }
 
-.add-link {
-    display: flex;
-    margin-top: 30px;
-    font-family: Source Sans Pro;
+.add-paragraph {
+    padding-top: 15px;
+    font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 20px;
+    font-weight: 500 !important;
+    font-size: 22px !important;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+
+.add-link-box {
     display: flex;
     align-items: center;
     text-align: center;
+    padding: 15px 0px;
+}
+
+.add-link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px !important;
+    line-height: 20px !important;
     text-decoration-line: underline;
     color: #FFFFFF;
     cursor: pointer;
 }
 
-.add-image-box{
-    width: 50%;
+.arrowForward {
+    width: 25px;
+    height: 20px;
+    margin-left: 5px;
+    color: white;
+}
 
+.add-image-div{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+}
+
+.phone-image {
+    width: 110px;
+    height: 230px;
 }
 
 .images {
-    margin-top: 25px;
+    margin: 20px 0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    
+    justify-content: space-around;
+}
+
+.playStore {
+    width: 150px;
+    height: 50px;
+}
+
+.config-box{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.config-header-box {
+    display: flex;
+    align-items: center;
+}
+
+.config-header {
+    font-family:Roboto;
+    font-style: normal;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    line-height: 25px !important;
+    display: flex;
+    align-items: center;
+    color: #103B66;
+}
+
+.config-add-icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
 }
 
 .exten-main {
@@ -315,15 +395,15 @@ justify-content: space-between;
 }
 
 .exten-box2 {
-    padding-right: 0px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .exten-icon {
-width: 102px;
-height: 100px;
+width: 155px;
+height: 155px;
 background: #FFA26B;
 border-radius: 10px;
 display: flex;
@@ -331,25 +411,41 @@ justify-content: center;
 align-items: center;
 }
 
+.extension-icon {
+    color: #ffffff; 
+    width: 70px;
+    height: 70px;
+}
+
 .exten-icon2 {
-    width: 102px;
-    height: 100px;
+    width: 155px;
+    height: 155px;
     background: #00C48C;
     border-radius: 10px;
     display: flex;
     color: #ffffff;
     justify-content: center;
     align-items: center;
-    padding-right: 0px;
     }
 
 .exten-text {
-font-family: Source Sans Pro;
-font-style: normal;
-font-weight: normal;
-font-size: 17px;
-line-height: 20px;
-color: #103B66;
+    padding-top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px !important;
+    line-height: 20px !important;
+    color: #103B66 !important;
+}
+
+.extension-icon-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 34px !important;
+    line-height: 39px !important;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 .news-box {
@@ -368,15 +464,15 @@ color: #103B66;
 
 .news-icon {
 margin-right: 10px;
-color: #103B66
+color: #103B66;
+height: 23px;
 }
 
 .news-text1 {
-font-family: Noto Sans HK;
+font-family: Roboto;
 font-style: normal;
 font-weight: 500;
-font-size: 22px;
-line-height: 27px;
+font-size: 22px !important;
 display: flex;
 align-items: center;
 color: #103B66;
@@ -384,11 +480,10 @@ color: #103B66;
 
 .news-text2 {
 margin-right: 10px;
-font-family: Source Sans Pro;
+font-family: Roboto;
 font-style: normal;
 font-weight: normal;
-font-size: 17px;
-line-height: 20px;
+font-size: 17px !important;
 display: flex;
 align-items: center;
 text-align: right;
@@ -426,30 +521,25 @@ cursor: pointer;
 }
 
 .news-h6 {
-font-family: Noto Sans HK;
-font-style: normal;
-font-weight: 500;
-font-size: 11px;
-line-height: 13px;
+font-family: Roboto;
+font-size: 11px !important;
 text-transform: uppercase;
 color: #21B8F9;
 }
 
 .news-paragraph {
-font-family: Noto Sans HK;
+font-family: Roboto;
 font-style: normal;
 font-weight: 500;
-font-size: 15px;
-line-height: 20px;
+font-size: 15px !important;
 color: #103B66;
 }
 
 .news-link {
-font-family: Noto Sans HK;
+font-family: Roboto;
 font-style: normal;
-font-weight: 300;
-font-size: 12px;
-line-height: 12px;
+font-weight: 300 !important;
+font-size: 12 !important;
 text-decoration-line: underline;
 color: #103B66;
 }

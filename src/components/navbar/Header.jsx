@@ -1,20 +1,19 @@
 import { Badge } from '@mui/material'
 import React from 'react'
-import PlaceIcon from '@mui/icons-material/Place';
+import BoltOutlinedIcon from '@mui/icons-material/BoltOutlined';
+import './Header.css'
 
 
-
-const Header = ({title, link}) => {
+const Header = ({title, linkText}) => {
   return (
     <div style={{display: 'flex', alignItems:'center', justifyContent: 'space-between', width: '100%'}}>
-     <span>{title}</span>
+     <span className='title'>{title}</span>
      <div style={{display: 'flex', alignItems:'center', justifyContent: 'space-between',}}>
-        <PlaceIcon />
-        <Badge badgeContent={2} color="secondary">
-        <span>{link}</span>
+        <BoltOutlinedIcon />
+        <Badge badgeContent={2} color='error'>
+          <span className='link' >{linkText}</span>
         </Badge>
      </div>
-     
 </div>
   )
 }

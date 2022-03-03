@@ -1,8 +1,9 @@
 import React from 'react';
+import './cardInfo.css'
 
 const CardInfo = ({viewIcon, header, text, arroDownIcon, children,}) => {
   return (
-  <div style={{padding: '10px'}}>
+  <div className='card-box' style={{padding: '10px'}}>
     <div className='card-content1'>
         <div className='card-header'>
             {viewIcon}

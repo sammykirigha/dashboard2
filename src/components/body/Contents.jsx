@@ -1,8 +1,7 @@
 import { Avatar, Box, Button, CardMedia, Grid, styled, Typography } from "@mui/material";
-import "./cards.css";
+import "./Content.css";
 import React from "react";
 import MediaCard from "./contentCard";
-import CardInfo from "./cardInfo";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
@@ -19,6 +18,7 @@ import image3 from '../../images/googleapp.png'
 import image4 from '../../images/Image.png'
 import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
 import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
+import CardInfo from "../reusableCompts/cardInfo/cardInfo";
 
 const Contents = () => {
     return (
@@ -33,26 +33,18 @@ const Contents = () => {
                             header={"Visitors"}
                             text={"This month"}
                             arroDownIcon={
-                                <ArrowDropDownIcon className="icon" />
+                                <ArrowDropDownIcon className="icon2" />
                             }
                         >
-                            <h2>5784</h2>
-                            <div
-                                style={{
-                                    padding: "10px",
-                                    color: "#21B8F9",
-                                    cursor: "pointer",
-                                    display: "flex",
-                                    alignItems: "center",
-                                }}
-                            >
+                            <span className="visitors-number">5784</span>
+                            <div className="visitors-info"  >
                                 <span className="config-link">
                                     Do you want more visits? Contact us!
                                 </span>
                                 <ArrowForwardOutlinedIcon
                                     style={{
                                         width: "18px",
-                                        marginLeft: "10px",
+                                        marginLeft: "5px",
                                     }}
                                 />
                             </div>
@@ -66,18 +58,18 @@ const Contents = () => {
                             header={"Orders"}
                             text={"This month"}
                             arroDownIcon={
-                                <ArrowDropDownIcon className="icon" />
+                                <ArrowDropDownIcon className="icon2" />
                             }
                         >
                             <div className="orders">
                                 <div className="orders-up">
                                     <div className="orders-up-section1">
-                                        <div>Orders Received: </div>
-                                        <div>156</div>
+                                        <div className="orders-received">Orders Received: </div>
+                                        <div className="orders-quantity">156</div>
                                     </div>
                                     <div className="orders-up-section2">
-                                        <div>Earnings: </div>
-                                        <div>$1893.24</div>
+                                        <div className="orders-received">Earnings: </div>
+                                        <div className="orders-quantity">$1893.24</div>
                                     </div>
                                 </div>
                                 <div className="orders-down">
@@ -92,36 +84,36 @@ const Contents = () => {
                         <Box className="add-box">
                             <Box className="add-body" >
                               <Box className="add-text-box">
-                                <Typography component='p'>
+                                <Typography className="add-paragraph">
                                   Sell your products on your exclusive APP published on the stores 
                                 </Typography>
-                                <Typography component='div' className="add-link">
-                                    <span>Show more</span>
-                                    <ArrowForwardIcon style={{width: '25px', height: '20px', marginLeft: '10px'}} />
+                                <Typography  className="add-link-box">
+                                    <span className="add-link">Show more</span>
+                                    <ArrowForwardIcon className="arrowForward"  />
                                 </Typography>
                                </Box>
                                <Box className="add-image-div" >
-                                  <img style={{width: '110px', height: '210px'}} src={image1} alt="phone" />
+                                  <img className="phone-image"  src={image1} alt="phone" />
                                </Box>
                             </Box>
                             <Box className="images">
-                              <img style={{width: '150px', height: '50px'}} src={image2} alt="phone" />
-                              <img style={{width: '150px', height: '50px'}} src={image3} alt="phone" />
+                              <img className="playStore"  src={image2} alt="phone" />
+                              <img className="playStore" src={image3} alt="phone" />
                             </Box>
                         </Box>
                     </MediaCard>
                     <MediaCard>
-                    <Box style={{padding: '10px', height: '550px', display: 'flex', flexDirection: 'column'}}>
-                         <Box style={{display: 'flex', alignItems: 'center'}}>
-                           <AddchartIcon style={{height: '20px', width: '20px', marginRight: '10px'}}/>
-                           <Typography  component='p' className='config-text'>
+                    <Box className="config-box">
+                         <Box className="config-header-box" >
+                           <AddchartIcon className="config-add-icon" />
+                           <Typography  component='p' className='config-header'>
                              Extensions marketplace
                            </Typography>
                          </Box>
                          <Box className="exten-main">
                              <Box className="exten-box">
                                  <Box className="exten-icon">
-                                    <LanguageIcon style={{color: '#ffffff', width: '40px', height: '40px'}}/>
+                                    <LanguageIcon className="extension-icon" />
                                  </Box>
                                  <Typography className="exten-text">
                                     Connect your own domain 
@@ -129,7 +121,7 @@ const Contents = () => {
                              </Box>
                              <Box className="exten-box2" >
                                  <Box className="exten-icon2">
-                                    <Typography >
+                                    <Typography className="extension-icon-text">
                                     +50 Prodotti
                                     </Typography>
                                  </Box>
@@ -168,7 +160,7 @@ const Contents = () => {
                                         <img className="image"  src={image4} alt='news' />
                                     </Box>
                                     <Box className="news-info">
-                                       <Typography component='h6' className="news-h6" >
+                                       <Typography className="news-h6" >
                                            Ecommerce
                                        </Typography> 
                                        <Typography component='p' className="news-paragraph" >
@@ -291,71 +283,6 @@ const Contents = () => {
                                        </Typography>
                                     </Box>
                                 </Box>
-                                <Box className="news-body">
-                                    <Box className="news-image">
-                                        <img className="image"  src={image4} alt='news' />
-                                    </Box>
-                                    <Box className="news-info">
-                                       <Typography component='h6' className="news-h6" >
-                                           Ecommerce
-                                       </Typography> 
-                                       <Typography component='p' className="news-paragraph" >
-                                        How to configure the DNS to point to your VetrinaLive
-                                       </Typography>
-                                       <Typography component='p' className="news-link" >
-                                        Estimated reading: 4 min
-                                       </Typography>
-                                    </Box>
-                                </Box>
-                                <Box className="news-body">
-                                    <Box className="news-image">
-                                        <img className="image"  src={image4} alt='news' />
-                                    </Box>
-                                    <Box className="news-info">
-                                       <Typography component='h6' className="news-h6" >
-                                           Ecommerce
-                                       </Typography> 
-                                       <Typography component='p' className="news-paragraph" >
-                                        How to configure the DNS to point to your VetrinaLive
-                                       </Typography>
-                                       <Typography component='p' className="news-link" >
-                                        Estimated reading: 4 min
-                                       </Typography>
-                                    </Box>
-                                </Box>
-                                <Box className="news-body">
-                                    <Box className="news-image">
-                                        <img className="image"  src={image4} alt='news' />
-                                    </Box>
-                                    <Box className="news-info">
-                                       <Typography component='h6' className="news-h6" >
-                                           Ecommerce
-                                       </Typography> 
-                                       <Typography component='p' className="news-paragraph" >
-                                        How to configure the DNS to point to your VetrinaLive
-                                       </Typography>
-                                       <Typography component='p' className="news-link" >
-                                        Estimated reading: 4 min
-                                       </Typography>
-                                    </Box>
-                                </Box>
-                                <Box className="news-body">
-                                    <Box className="news-image">
-                                        <img className="image"  src={image4} alt='news' />
-                                    </Box>
-                                    <Box className="news-info">
-                                       <Typography component='h6' className="news-h6" >
-                                           Ecommerce
-                                       </Typography> 
-                                       <Typography component='p' className="news-paragraph" >
-                                        How to configure the DNS to point to your VetrinaLive
-                                       </Typography>
-                                       <Typography component='p' className="news-link" >
-                                        Estimated reading: 4 min
-                                       </Typography>
-                                    </Box>
-                                </Box>
-                                
                             </DashLeftInnerCards>
                         </MediaCard>
                     </DashLeftInner>
@@ -365,23 +292,23 @@ const Contents = () => {
                         <Box style={{padding: '10px'}}>
                          <Box style={{display: 'flex', alignItems: 'center'}}>
                            <BuildIcon style={{height: '20px', width: '20px', marginRight: '10px'}}/>
-                           <Typography  component='p' className='config-text'>
+                           <Typography className='config-text'>
                              Configure your shop
                            </Typography>
                          </Box>
                          <Box className="complete-box">
-                           <Typography  component='h6' >
+                           <Typography className="complete-box" >
                              45%
                            </Typography>
-                           <Typography  component='span'>
+                           <Typography  component='span' >
                              completed
                            </Typography>
                          </Box>
-                         <Box style={{marginTop: '15px'}}>
+                         <Box style={{margin: '15px 0px', width: '90%'}}>
                            <Typography  component='p' className="config-paragraph">
                            Complete all the steps to have a complete shop to best present to your customers.
                            </Typography>
-                           <Typography component='div' style={{paddingTop: '5px'}} className="config-link">
+                           <Typography component='div' className="config-link">
                             Complete the setup!
                             <ArrowForwardIcon style={{height: '20px', width: '25px', marginLeft: '7px'}} /> 
                            </Typography>
@@ -396,7 +323,7 @@ const Contents = () => {
                              Trustpilot
                            </Typography>
                          </Box>
-                         <Box style={{marginTop: '15px', padding: '20px'}}>
+                         <Box style={{marginTop: '15px', padding: '20px', width: '90%'}}>
                            <Typography  component='p' className="trust-paragraph">
                            Show us your love by leaving a positive review on trust pilot and receive the extension of 50 additional products
                            </Typography>
@@ -415,12 +342,12 @@ const Contents = () => {
                              Invite friend
                            </Typography>
                          </Box>
-                         <Box>
+                         <Box style={{width: '90%'}}>
                            <Typography  component='p' className="invite-paragraph">
-                           Receive 50 products by inviting a friend who subscribes to a plan. 
+                           <strong style={{color: '#00C48C'}}>Receive 50 products</strong> by inviting a friend who subscribes to a plan. 
                            Your friend will receive a 30% discount coupon valid for any plan.
                            </Typography>
-                           <Typography component='div' className="config-link">
+                           <Typography component='div' className="invite-link">
                             Complete the setup!
                             <ArrowForwardIcon style={{height: '20px', width: '25px', marginLeft: '7px'}} /> 
                            </Typography>
@@ -436,16 +363,16 @@ const Contents = () => {
                            </Typography>
                          </Box>
                          <Box className="customer-box">
-                         <Avatar alt="Remy Sharp" src="../../images/77a56eec-c6d6-4b82-bf17-92cc8bac05da.jpeg" />
-                         <Typography component='span' style={{marginLeft: '10px'}}>
+                         <Avatar alt="Sammy" src={image1} />
+                         <Typography component='span' className="customer-text">
                           Simone is here to help you.
                          </Typography>
                          </Box>
-                         <Box style={{marginTop: '15px'}}>
-                           <Button sx={{backgroundColor: 'blue', width: '120px', height: '35px', color: 'white'}} >
+                         <div style={{margin: '10px 0px', padding: '10px'}}>
+                           <button className="customer-button" >
                              Contact us
-                           </Button>
-                         </Box>
+                           </button>
+                         </div>
                         </Box>
                     </MediaCard>
                 </DashRight>
@@ -458,7 +385,7 @@ const DashContainer = styled(Box)(() => ({
     display: "flex",
     width: "100%",
     gap:"20px",
-    transform:"translateY(-50px)",
+    transform:"translateY(-35px)",
     alignItems:"start"
 }));
 

@@ -10,39 +10,42 @@
 }
 
 h3{
-    font-size: 20px;
-    font-weight: 500;
-    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px !important;
+    line-height: 39px;
+    color: #FFFFFF;
 }
 
 .right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: Noto Sans HK;
-font-style: normal;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-family: Roboto;
 font-weight: 500;
 font-size: 17px;
 line-height: 22px;
-/* identical to box height, or 129% */
-
 display: flex;
 align-items: center;
 text-align: right;
-text-decoration-line: underline;
-    
 }
 
-.link {
-    font-family: Noto Sans HK;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 22px;
+.hero-link {
+    color: white !important;
+    cursor: pointer;
+    font-family: Roboto;
+    font-size: 17px !important;
     display: flex;
     align-items: center;
     text-align: right;
-    text-decoration-line: underline;
-    color: white;
+    text-decoration: underline;
     margin-right: 10px;
+    text-decoration-line: none !important;
+    border-bottom: 1px solid white;
+}
+
+.hero-icon {
+    color: white;
+    margin-left: 8px;
 }

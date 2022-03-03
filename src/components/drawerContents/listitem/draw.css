@@ -1,0 +1,12 @@
+.listitem-text {
+    font-family: Noto Sans HK;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #0f273f !important;
+}
+
+.listitem {
+ margin-left: 5px;
+}
