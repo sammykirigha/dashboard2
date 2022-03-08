@@ -1,6 +1,6 @@
 import { Avatar, Box, Button, CardMedia, Grid, styled, Typography } from "@mui/material";
 import "./Content.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MediaCard from "./contentCard";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -15,12 +15,37 @@ import LanguageIcon from '@mui/icons-material/Language';
 import image1 from '../../images/iPhone.png'
 import image2 from '../../images/appstore.png'
 import image3 from '../../images/googleapp.png'
-import image4 from '../../images/Image.png'
 import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
 import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
 import CardInfo from "../reusableCompts/cardInfo/cardInfo";
+import { useDispatch, useSelector } from "react-redux";
+import { getLatestNews } from "../../redux/newsActions";
+
+
+const truncateString = (str, num) => {
+    if (str?.length > num) {
+        let subStr = str.substring(0, num);
+        return subStr + "...";
+    } else {
+        return str;
+    }
+  }
 
 const Contents = () => {
+  const {news, loading} = useSelector((state) => state.news)
+  let data = news[0].data.articles
+
+  let newData = data.slice(0, 8)
+
+  const [_news, setNews] = useState([])
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getLatestNews())
+    setNews(newData)
+  }, [])
+
+  console.log("my data", news);
     return (
         <Box sx={{ paddingLeft: "15px", paddingRight: "15px" }}>
             <DashContainer>
@@ -74,7 +99,7 @@ const Contents = () => {
                                 </div>
                                 <div className="orders-down">
                                     <span className="config-link">
-                                        Do you want more visits? Contact us!
+                                        10 free tips to increase your sales
                                     </span>
                                 </div>
                             </div>
@@ -155,134 +180,24 @@ const Contents = () => {
                                 </Box> 
                             </Box>
                             <DashLeftInnerCards>
-                                <Box className="news-body">
-                                    <Box className="news-image">
-                                        <img className="image"  src={image4} alt='news' />
-                                    </Box>
-                                    <Box className="news-info">
-                                       <Typography className="news-h6" >
-                                           Ecommerce
-                                       </Typography> 
-                                       <Typography component='p' className="news-paragraph" >
-                                        How to configure the DNS to point to your VetrinaLive
-                                       </Typography>
-                                       <Typography component='p' className="news-link" >
-                                        Estimated reading: 4 min
-                                       </Typography>
-                                    </Box>
-                                </Box>
-                                <Box className="news-body">
-                                    <Box className="news-image">
-                                        <img className="image"  src={image4} alt='news' />
-                                    </Box>
-                                    <Box className="news-info">
-                                       <Typography component='h6' className="news-h6" >
-                                           Ecommerce
-                                       </Typography> 
-                                       <Typography component='p' className="news-paragraph" >
-                                        How to configure the DNS to point to your VetrinaLive
-                                       </Typography>
-                                       <Typography component='p' className="news-link" >
-                                        Estimated reading: 4 min
-                                       </Typography>
-                                    </Box>
-                                </Box>
-                                <Box className="news-body">
-                                    <Box className="news-image">
-                                        <img className="image"  src={image4} alt='news' />
-                                    </Box>
-                                    <Box className="news-info">
-                                       <Typography component='h6' className="news-h6" >
-                                           Ecommerce
-                                       </Typography> 
-                                       <Typography component='p' className="news-paragraph" >
-                                        How to configure the DNS to point to your VetrinaLive
-                                       </Typography>
-                                       <Typography component='p' className="news-link" >
-                                        Estimated reading: 4 min
-                                       </Typography>
-                                    </Box>
-                                </Box>
-                                <Box className="news-body">
-                                    <Box className="news-image">
-                                        <img className="image"  src={image4} alt='news' />
-                                    </Box>
-                                    <Box className="news-info">
-                                       <Typography component='h6' className="news-h6" >
-                                           Ecommerce
-                                       </Typography> 
-                                       <Typography component='p' className="news-paragraph" >
-                                        How to configure the DNS to point to your VetrinaLive
-                                       </Typography>
-                                       <Typography component='p' className="news-link" >
-                                        Estimated reading: 4 min
-                                       </Typography>
-                                    </Box>
-                                </Box>
-                                <Box className="news-body">
-                                    <Box className="news-image">
-                                        <img className="image"  src={image4} alt='news' />
-                                    </Box>
-                                    <Box className="news-info">
-                                       <Typography component='h6' className="news-h6" >
-                                           Ecommerce
-                                       </Typography> 
-                                       <Typography component='p' className="news-paragraph" >
-                                        How to configure the DNS to point to your VetrinaLive
-                                       </Typography>
-                                       <Typography component='p' className="news-link" >
-                                        Estimated reading: 4 min
-                                       </Typography>
-                                    </Box>
-                                </Box>
-                                <Box className="news-body">
-                                    <Box className="news-image">
-                                        <img className="image"  src={image4} alt='news' />
-                                    </Box>
-                                    <Box className="news-info">
-                                       <Typography component='h6' className="news-h6" >
-                                           Ecommerce
-                                       </Typography> 
-                                       <Typography component='p' className="news-paragraph" >
-                                        How to configure the DNS to point to your VetrinaLive
-                                       </Typography>
-                                       <Typography component='p' className="news-link" >
-                                        Estimated reading: 4 min
-                                       </Typography>
-                                    </Box>
-                                </Box>
-                                <Box className="news-body">
-                                    <Box className="news-image">
-                                        <img className="image"  src={image4} alt='news' />
-                                    </Box>
-                                    <Box className="news-info">
-                                       <Typography component='h6' className="news-h6" >
-                                           Ecommerce
-                                       </Typography> 
-                                       <Typography component='p' className="news-paragraph" >
-                                        How to configure the DNS to point to your VetrinaLive
-                                       </Typography>
-                                       <Typography component='p' className="news-link" >
-                                        Estimated reading: 4 min
-                                       </Typography>
-                                    </Box>
-                                </Box>
-                                <Box className="news-body">
-                                    <Box className="news-image">
-                                        <img className="image"  src={image4} alt='news' />
-                                    </Box>
-                                    <Box className="news-info">
-                                       <Typography component='h6' className="news-h6" >
-                                           Ecommerce
-                                       </Typography> 
-                                       <Typography component='p' className="news-paragraph" >
-                                        How to configure the DNS to point to your VetrinaLive
-                                       </Typography>
-                                       <Typography component='p' className="news-link" >
-                                        Estimated reading: 4 min
-                                       </Typography>
-                                    </Box>
-                                </Box>
+                                {loading ? <h4>Loading</h4> : _news?.map((item, index )=> (
+                                    <Box key={index} className="news-body">
+                                        <Box className="news-image">
+                                            <img className="image"  src={item.urlToImage} alt='news' />
+                                        </Box>
+                                        <Box className="news-info">
+                                            <Typography className="news-h6" >
+                                                    {truncateString(item.title, 15)}
+                                                </Typography> 
+                                            <Typography component='p' className="news-paragraph" >
+                                            {item.description ? truncateString(item.description, 50) : 'i think that the: return true; // Inform Chrome that we will make a delayed sendResponse'}
+                                            </Typography>
+                                            <Typography component='p' className="news-link" >
+                                            {truncateString(item.url, 30)}
+                                            </Typography>
+                                        </Box>
+                                    </Box> 
+                                    ))}
                             </DashLeftInnerCards>
                         </MediaCard>
                     </DashLeftInner>

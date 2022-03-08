@@ -24,7 +24,7 @@
 }
 
 .visitors-info {
-    padding: 10px;
+    padding-top: 30px;
     color: #21B8F9;
     margin-top: 20px;
     cursor: pointer;
@@ -140,11 +140,11 @@
 }
 
 .config-link {
-    padding: 10px;
+    padding: 10px 0px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px !important;
+    font-size: 17px !important;
     line-height: 20px;
     display: flex;
     align-items: center;
@@ -245,6 +245,7 @@
 
 .customer-text {
     margin-left: 10px;
+    padding-left: 10px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -256,7 +257,7 @@
 }
 
 .customer-button {
-    width: 150px;
+    width: 130px;
     height: 40px;
     color: #FFFFFF;
     font-family: Roboto;
@@ -266,8 +267,8 @@
     font-weight: 600;
     cursor: pointer;
     border-radius: 5px;
+    border: none;
 }
-
 
 .add-box {
     display: flex;
@@ -501,7 +502,7 @@ cursor: pointer;
 }
 
 .news-image {
-    
+    object-fit: cover;
 }
 
 .image {

@@ -1,6 +1,6 @@
 import { Box, Drawer } from '@mui/material'
 import React from 'react'
-import ListContainer from '../drawerContents/list/List'
+import ListContainer from '../../drawerContents/list/List'
 
 const drawerWidth = 270;
 
