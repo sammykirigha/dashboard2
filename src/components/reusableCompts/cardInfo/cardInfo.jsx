@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DropDown from '../dropdown/DropDown';
+import Select from '../select/Select';
 import './cardInfo.css'
 
 
@@ -13,7 +14,7 @@ const CardInfo = ({viewIcon, header, text, arroDownIcon, children,}) => {
           <span className='card-content-span1'>{header}</span>
         </div>
         <div className='card-header'>
-          <DropDown />
+          <Select />
           {/* <span className='card-content-span2' style={{marginLeft: '30px'}}>{text}</span>
           {arroDownIcon} */}
         </div>

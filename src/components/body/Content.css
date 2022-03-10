@@ -414,8 +414,8 @@ align-items: center;
 
 .extension-icon {
     color: #ffffff; 
-    width: 70px;
-    height: 70px;
+    width: 100px !important;
+    height: 100px !important;
 }
 
 .exten-icon2 {
@@ -425,6 +425,7 @@ align-items: center;
     border-radius: 10px;
     display: flex;
     color: #ffffff;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     }

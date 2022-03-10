@@ -55,7 +55,7 @@ const ListContainer = ({ handleDrawerClick }) => {
             <List>
                 <ListItemContent icon={<HomeIcon />} text={"Dashboard"} />
                 <ListItemContent icon={<ShoppingCartOutlinedIcon  />} text={"Catalogue"}>
-                    <ArrowDropDownIcon />
+                    {/* <ArrowDropDownIcon /> */}
                 </ListItemContent>
                 <ListItemContent icon={<FormatListBulletedIcon />}text={"Orders"}>
                     <Badge badgeContent={4} color="error" />

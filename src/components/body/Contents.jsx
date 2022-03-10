@@ -20,6 +20,7 @@ import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
 import CardInfo from "../reusableCompts/cardInfo/cardInfo";
 import { useDispatch, useSelector } from "react-redux";
 import { getLatestNews } from "../../redux/newsActions";
+import Carousel, { CarouselItem } from "../reusableCompts/carousel/Carousel";
 
 
 const truncateString = (str, num) => {
@@ -33,16 +34,16 @@ const truncateString = (str, num) => {
 
 const Contents = () => {
   const {news, loading} = useSelector((state) => state.news)
-  let data = news[0].data.articles
+//   let data = news[0].data.articles
 
-  let newData = data.slice(0, 8)
+//   let newData = data.slice(0, 8)
 
-  const [_news, setNews] = useState([])
+//   const [_news, setNews] = useState([])
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getLatestNews())
-    setNews(newData)
+    // setNews(newData)
   }, [])
 
   console.log("my data", news);
@@ -136,24 +137,68 @@ const Contents = () => {
                            </Typography>
                          </Box>
                          <Box className="exten-main">
-                             <Box className="exten-box">
-                                 <Box className="exten-icon">
-                                    <LanguageIcon className="extension-icon" />
-                                 </Box>
-                                 <Typography className="exten-text">
-                                    Connect your own domain 
-                                 </Typography>
-                             </Box>
-                             <Box className="exten-box2" >
-                                 <Box className="exten-icon2">
-                                    <Typography className="extension-icon-text">
-                                    +50 Prodotti
-                                    </Typography>
-                                 </Box>
-                                 <Typography className="exten-text">
-                                  50 Additional Products 
-                                 </Typography>
-                            </Box>
+                             <Carousel>
+                                 <CarouselItem>
+                                    <Box className="exten-box">
+                                        <Box className="exten-icon">
+                                            <LanguageIcon className="extension-icon" />
+                                        </Box>
+                                        <Typography className="exten-text">
+                                            Connect your own domain 
+                                        </Typography>
+                                    </Box>
+                                 </CarouselItem>
+                                 <CarouselItem>
+                                    <Box className="exten-box">
+                                        <Box className="exten-icon">
+                                            <LanguageIcon className="extension-icon" />
+                                        </Box>
+                                        <Typography className="exten-text">
+                                            Connect your own domain 
+                                        </Typography>
+                                    </Box>
+                                 </CarouselItem>
+                                 <CarouselItem>
+                                    <Box className="exten-box">
+                                        <Box className="exten-icon">
+                                            <LanguageIcon className="extension-icon" />
+                                        </Box>
+                                        <Typography className="exten-text">
+                                            Connect your own domain 
+                                        </Typography>
+                                    </Box>
+                                 </CarouselItem>
+                                 {/* <CarouselItem>
+                                    <Box className="exten-box2" >
+                                        <Box className="exten-icon2">
+                                            <Typography className="extension-icon-text">
+                                              +50
+                                            </Typography>
+                                            <Typography className="extension-icon-text">
+                                              Prodotti
+                                            </Typography>
+                                        </Box>
+                                        <Typography className="exten-text">
+                                        50 Additional Products 
+                                        </Typography>
+                                    </Box>
+                                 </CarouselItem> */}
+                                 {/* <CarouselItem>
+                                    <Box className="exten-box2" >
+                                        <Box className="exten-icon2">
+                                            <Typography className="extension-icon-text">
+                                              +50
+                                            </Typography>
+                                            <Typography className="extension-icon-text">
+                                              Prodotti
+                                            </Typography>
+                                        </Box>
+                                        <Typography className="exten-text">
+                                        50 Additional Products 
+                                        </Typography>
+                                    </Box>
+                                 </CarouselItem> */}
+                             </Carousel>
                          </Box>
                          <Box style={{marginTop: '25px'}}>
                             <Typography component='div' style={{paddingTop: '5px'}} className="config-link">
@@ -180,7 +225,7 @@ const Contents = () => {
                                 </Box> 
                             </Box>
                             <DashLeftInnerCards>
-                                {loading ? <h4>Loading</h4> : _news?.map((item, index )=> (
+                                {/* {loading ? <h4>Loading</h4> : news?.map((item, index )=> (
                                     <Box key={index} className="news-body">
                                         <Box className="news-image">
                                             <img className="image"  src={item.urlToImage} alt='news' />
@@ -197,7 +242,7 @@ const Contents = () => {
                                             </Typography>
                                         </Box>
                                     </Box> 
-                                    ))}
+                                    ))} */}
                             </DashLeftInnerCards>
                         </MediaCard>
                     </DashLeftInner>
