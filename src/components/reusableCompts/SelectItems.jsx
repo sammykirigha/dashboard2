@@ -38,6 +38,10 @@ export default function SelectItems() {
           placeholder="Select your shop"
           onChange={handleChange}
           input={<OutlinedInput label="Name" />}
+          sx={{
+            outline: '0px',
+            border: '0px'
+          }}
         >
           {names.map((name) => (
             <MenuItem

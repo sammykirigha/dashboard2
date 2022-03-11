@@ -17,11 +17,10 @@ import image2 from '../../images/appstore.png'
 import image3 from '../../images/googleapp.png'
 import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
 import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
-import CardInfo from "../reusableCompts/cardInfo/cardInfo";
+// import CardInfo from "../reusableCompts/cardInfo/cardInfo";
 import { useDispatch, useSelector } from "react-redux";
 import { getLatestNews } from "../../redux/newsActions";
 import Carousel, { CarouselItem } from "../reusableCompts/carousel/Carousel";
-
 
 const truncateString = (str, num) => {
     if (str?.length > num) {
@@ -32,13 +31,47 @@ const truncateString = (str, num) => {
     }
   }
 
+  const options = [
+    {
+        label: "This Month",
+        value: "1235"
+    },
+    {
+        label: "Next Month",
+        value: "4563"
+    },
+    {
+        label: "Last Month",
+        value: "7890"
+    }
+]
+
+const optionsB = [
+    {
+        label: "This Year",
+        value: {num: '567', price: '7865.65' }
+    },
+    {
+        label: "Next Year",
+        value: {num: '467', price: '9565.78' }
+    },
+    {
+        label: "Last Year",
+        value: {num: '127', price: '2065.43' }
+    }
+]
+
+
 const Contents = () => {
+  const [values, setValues] = useState(5678)
+  const [orders, setOrders] = useState(6754.77)
+
   const {news, loading} = useSelector((state) => state.news)
 //   let data = news[0].data.articles
 
 //   let newData = data.slice(0, 8)
 
-//   const [_news, setNews] = useState([])
+  const [_news, setNews] = useState([])
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -46,65 +79,94 @@ const Contents = () => {
     // setNews(newData)
   }, [])
 
+
+  const onChange = (e) => {
+      const {name, value} = e.target;
+      setValues(value)
+      console.log(value);
+    }
+    
+    const ordersChange = (e) => {
+        const {name, value} = e.target;
+        setOrders(value)
+        console.log(value);
+    }
+    
+  console.log(orders);
+//   console.log(values);
+
+
   console.log("my data", news);
     return (
         <Box sx={{ paddingLeft: "15px", paddingRight: "15px" }}>
             <DashContainer>
                 <DashLeft>
                     <MediaCard>
-                        <CardInfo
-                            viewIcon={
-                                <RemoveRedEyeOutlinedIcon className="icon" />
-                            }
-                            header={"Visitors"}
-                            text={"This month"}
-                            arroDownIcon={
-                                <ArrowDropDownIcon className="icon2" />
-                            }
-                        >
-                            <span className="visitors-number">5784</span>
-                            <div className="visitors-info"  >
-                                <span className="config-link">
-                                    Do you want more visits? Contact us!
-                                </span>
-                                <ArrowForwardOutlinedIcon
-                                    style={{
-                                        width: "18px",
-                                        marginLeft: "5px",
-                                    }}
-                                />
+                        <div className='card-box'>
+                            <div className='card-content1'>
+                                <div className='card-header'>
+                                    <FormatListBulletedIcon className="icon" />
+                                <span className='card-content-span1'>Visitors</span>
+                                </div>
+                                <div className='card-header'>
+                                    <select onChange={onChange} className='select'>
+                                        {options.map((option) => (
+                                            <option  value={option.value} >{option.label}</option>
+                                        ))}
+                                    </select>
+                                </div>
                             </div>
-                        </CardInfo>
+                            <div className='card-content2'>
+                                <span className="visitors-number">{values}</span>
+                                <div className="visitors-info"  >
+                                    <span className="config-link">
+                                        Do you want more visits? Contact us!
+                                    </span>
+                                    <ArrowForwardOutlinedIcon
+                                        style={{
+                                            width: "18px",
+                                            marginLeft: "5px",
+                                        }}
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </MediaCard>
                     <MediaCard>
-                        <CardInfo
-                            viewIcon={
-                                <FormatListBulletedIcon className="icon" />
-                            }
-                            header={"Orders"}
-                            text={"This month"}
-                            arroDownIcon={
-                                <ArrowDropDownIcon className="icon2" />
-                            }
-                        >
-                            <div className="orders">
-                                <div className="orders-up">
-                                    <div className="orders-up-section1">
-                                        <div className="orders-received">Orders Received: </div>
-                                        <div className="orders-quantity">156</div>
-                                    </div>
-                                    <div className="orders-up-section2">
-                                        <div className="orders-received">Earnings: </div>
-                                        <div className="orders-quantity">$1893.24</div>
-                                    </div>
+                        <div className='card-box'>
+                            <div className='card-content1'>
+                                <div className='card-header'>
+                                    <FormatListBulletedIcon className="icon" />
+                                <span className='card-content-span1'>Orders</span>
                                 </div>
-                                <div className="orders-down">
-                                    <span className="config-link">
-                                        10 free tips to increase your sales
-                                    </span>
+                                <div className='card-header'>
+                                    <select onChange={ordersChange} className='select'>
+                                        {optionsB.map((option, index) => (
+                                            <option  value={option.value.price} >{option.label}</option>
+                                        ))}
+                                    </select>
                                 </div>
                             </div>
-                        </CardInfo>
+                            <div className='card-content2'>
+                                <div className="orders">
+                                    <div className="orders-up">
+                                        <div className="orders-up-section1">
+                                            <div className="orders-received">Orders Received: </div>
+                                            <div className="orders-quantity">{Math.floor(orders/10)}</div>
+                                        </div>
+                                        <div className="orders-up-section2">
+                                            <div className="orders-received">Earnings: </div>
+                                            <div className="orders-quantity">${orders}</div>
+                                        </div>
+                                    </div>
+                                    <div className="orders-down">
+                                        <span className="config-link">
+                                            10 free tips to increase your sales
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </MediaCard>
                     <MediaCard>
                         <Box className="add-box">
@@ -225,7 +287,7 @@ const Contents = () => {
                                 </Box> 
                             </Box>
                             <DashLeftInnerCards>
-                                {/* {loading ? <h4>Loading</h4> : news?.map((item, index )=> (
+                                {loading ? <h4>Loading</h4> : _news?.map((item, index )=> (
                                     <Box key={index} className="news-body">
                                         <Box className="news-image">
                                             <img className="image"  src={item.urlToImage} alt='news' />
@@ -242,7 +304,7 @@ const Contents = () => {
                                             </Typography>
                                         </Box>
                                     </Box> 
-                                    ))} */}
+                                    ))}
                             </DashLeftInnerCards>
                         </MediaCard>
                     </DashLeftInner>
@@ -379,3 +441,8 @@ const DashLeftInner = styled(Box)(() => ({
 
 
 export default Contents;
+
+
+                                
+
+                            
