@@ -1,5 +1,6 @@
 .carousel {
   overflow: hidden;
+  margin-top: 15px;
 }
 
 .inner {
@@ -10,11 +11,8 @@
 
 .carousel-item {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
     height: 100%;
-    /* background-color: green; */
-    color: #fff;
 }
 
 .indicators {

@@ -1,0 +1,21 @@
+.listitem-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #21B8F9;
+}
+
+.listitem:hover {
+    border-left: 3px solid #21B8F9;
+}
+
+.listitem-box {
+ margin-left: 5px;
+}
+
+.icon {
+    color: #103B66;
+}
+

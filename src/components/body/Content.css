@@ -205,10 +205,10 @@
 }
 
 .trust-icon {
-    height: 23px; 
-    width: 23px;
+    height: 35px; 
+    width: 35px;
     margin-right: 0px;
-    color: #005128;
+    color: #00B67A;
 }
 
 
@@ -280,14 +280,14 @@
 }
 
 .add-body {
-width: 100%;
+/* width: auto; */
 display: flex;
 justify-content: space-between;
 align-items: flex-start;
 }
 
 .add-text-box{
-width: 50%;
+/* width: 50%; */
 display: flex;
 flex-direction: column;
 justify-content: space-between;
