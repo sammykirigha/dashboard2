@@ -10,7 +10,7 @@ const HeroSection = () => {
       <Grid container  >
           <Grid item xs={12} xl={12} md={12}  >
               <div className='background'>
-                  <h3>Welcome Samuel!</h3>
+                  <h3 data-testid='hero'>Welcome Samuel!</h3>
                   <div className='right'>
                       <Link className='hero-link'>app.vetrinalive.it/fenoh-store</Link>
                       <OpenInNewIcon className='hero-icon' />

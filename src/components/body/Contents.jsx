@@ -72,21 +72,20 @@ const optionsB = [
 
 const Contents = () => {
     const theme = useTheme();
+    const [_news, setNews] = useState([]);
     const [values, setValues] = useState(5678);
     const [orders, setOrders] = useState({ num: "100", price: "5688.33" });
-
-    const { news, loading } = useSelector((state) => state.news);
-    // let data = news[0].data.articles;
-
-    // let newData = data.slice(0, 8);
-
-    const [_news, setNews] = useState([]);
+    
+    const {news, loading} = useSelector((state) => state.news);
     const dispatch = useDispatch();
+    let arr = [news[0],news[1],news[2],news[3],news[4],news[5],news[6],news[7]]
 
     useEffect(() => {
         dispatch(getLatestNews());
-        // setNews(newData);
+        setNews(arr);
     }, []);
+
+    console.log(_news);
 
     const onChange = (e) => {
         const { value } = e.target;
@@ -98,7 +97,6 @@ const Contents = () => {
         setOrders(JSON.parse(value));
     };
 
-    console.log("my data", news);
     return (
         <Box sx={{ paddingLeft: "15px", paddingRight: "15px" }}>
             <DashContainer>
