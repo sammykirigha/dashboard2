@@ -1,10 +1,11 @@
 import { Box, Grid } from '@mui/material';
 import './App.css';
 import Contents from './components/body/Contents';
-import HeroSection from './components/navbar/Hero';
+import HeroSection from './components/navbar/hero/Hero';
 import PersistentDrawer from './components/Drawer'
 import { Route, Routes } from 'react-router-dom';
 import OneRoute from './components/reusableCompts/OneRoute';
+import Marketing from './components/reusableCompts/Marketing';
 
 
 function App() {
@@ -23,16 +24,16 @@ function App() {
             <Route exact path="/admin/catalogue" element={<><OneRoute /></>}/>
             <Route exact path="/admin/orders" element={<><OneRoute /></>}/>
             <Route exact path="/admin/customers" element={<><OneRoute /></>}/>
-            <Route exact path="/admin/marketing" element={<><OneRoute /></>}>
-                <Route path='/admin/marketing/discount' element={<><OneRoute /></>} />
-                <Route path='/admin/marketing/intent' element={<><OneRoute /></>} />
-                <Route path='/admin/marketing/features' element={<><OneRoute /></>} />
-                <Route path='/admin/marketing/conversion' element={<><OneRoute /></>} />
-                <Route path='/admin/marketing/abandonment' element={<><OneRoute /></>} />
-                <Route path='/admin/marketing/checkout' element={<><OneRoute /></>} />
-                <Route path='/admin/marketing/social' element={<><OneRoute /></>} />
-                <Route path='/admin/marketing/specialOffer' element={<><OneRoute /></>} />
-                <Route path='/admin/marketing/seasonalOffers' element={<><OneRoute /></>} />
+            <Route exact path="/admin/marketing" element={<><Marketing /></>}>
+                <Route path='/admin/marketing/discount' element={<><Marketing /></>} />
+                <Route path='/admin/marketing/intent' element={<><Marketing /></>} />
+                <Route path='/admin/marketing/features' element={<><Marketing /></>} />
+                <Route path='/admin/marketing/conversion' element={<><Marketing /></>} />
+                <Route path='/admin/marketing/abandonment' element={<><Marketing /></>} />
+                <Route path='/admin/marketing/checkout' element={<><Marketing /></>} />
+                <Route path='/admin/marketing/social' element={<><Marketing /></>} />
+                <Route path='/admin/marketing/specialOffer' element={<><Marketing /></>} />
+                <Route path='/admin/marketing/seasonalOffers' element={<><Marketing /></>} />
             </Route>
             <Route exact path="/admin/delivery" element={<><OneRoute /></>}/>
             <Route exact path="/admin/payment" element={<><OneRoute /></>}/>

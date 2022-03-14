@@ -76,16 +76,16 @@ const Contents = () => {
     const [orders, setOrders] = useState({ num: "100", price: "5688.33" });
 
     const { news, loading } = useSelector((state) => state.news);
-    let data = news[0].data.articles;
+    // let data = news[0].data.articles;
 
-    let newData = data.slice(0, 8);
+    // let newData = data.slice(0, 8);
 
     const [_news, setNews] = useState([]);
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getLatestNews());
-        setNews(newData);
+        // setNews(newData);
     }, []);
 
     const onChange = (e) => {
@@ -108,7 +108,7 @@ const Contents = () => {
                             <div className="card-content1">
                                 <div className="card-header">
                                     <RemoveRedEyeOutlinedIcon className="icon" />
-                                    <span className="card-content-span1">
+                                    <span data-testid='values' className="card-content-span1">
                                         Visitors
                                     </span>
                                 </div>
@@ -248,17 +248,6 @@ const Contents = () => {
                             </Box>
                             <Box className="exten-main">
                                 <Carousel>
-                                    {/* <CarouselItem>
-                                    <Box className="exten-box">
-                                        <Box className="exten-icon">
-                                            <LanguageIcon className="extension-icon" />
-                                        </Box>
-                                        <Typography className="exten-text">
-                                            Connect your own domain 
-                                        </Typography>
-                                    </Box>
-                                 </CarouselItem>
-                                 */}
                                     <CarouselItem>
                                         <Box className="exten-box2">
                                             <Box
@@ -626,6 +615,8 @@ const DashLeft = styled(Box)(({ theme }) => ({
         gap: "20px",
         gridTemplateColumns: "repeat(auto-fill, 1fr)",
     },
+    gap: "20px",
+    
 }));
 
 const DashRight = styled(Box)(() => ({

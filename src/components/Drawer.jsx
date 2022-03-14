@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { Box, IconButton, Slide, Toolbar, useScrollTrigger } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import MuiAppBar from '@mui/material/AppBar';
-import Header from './navbar/Header';
+import Header from './navbar/header/Header';
 import AppDrawer from './reusableCompts/dropdown/AppDrawer';
 
 const drawerWidth = 270;

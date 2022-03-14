@@ -3,6 +3,7 @@ import { blue } from '@mui/material/colors';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ListItem.css'
+
 const ListItemContent = ({icon, text, children, to}) => {
   const navigate = useNavigate();
 

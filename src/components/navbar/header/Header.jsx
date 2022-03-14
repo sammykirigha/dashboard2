@@ -2,12 +2,12 @@ import { Badge } from '@mui/material'
 import React from 'react'
 import BoltOutlinedIcon from '@mui/icons-material/BoltOutlined';
 import './Header.css'
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 
 const Header = ({title, linkText}) => {
-  const params = useLocation()
-  const name = params.pathname.split('/')
+  const location = useLocation()
+  const name = location.pathname.split('/')
   return (
     <div style={{display: 'flex', alignItems:'center', justifyContent: 'space-between', width: '100%'}}>
      <span className='title'>{name[2]? name[2] : title}</span>

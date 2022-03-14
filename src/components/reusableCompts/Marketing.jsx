@@ -4,8 +4,8 @@ import Spinner from './spinner/Spinner'
 const OneRoute = () => {
   return (
     <div style={{marginTop: '150px', marginLeft: '50px'}}>
-        <h2 data-tesid='header-text'>
-            Loading your data in a moment.....
+        <h2 data-testid='header'>
+            Marketing data is being loaded.....
         </h2>
         <div style={{marginLeft: '150px'}}>
          <Spinner />
