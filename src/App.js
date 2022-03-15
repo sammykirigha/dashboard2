@@ -1,5 +1,4 @@
 import { Box, Grid } from '@mui/material';
-import './App.css';
 import Contents from './components/body/Contents';
 import HeroSection from './components/navbar/hero/Hero';
 import PersistentDrawer from './components/Drawer'

@@ -1,9 +1,6 @@
 import {
     Avatar,
     Box,
-    Button,
-    CardMedia,
-    Grid,
     styled,
     Typography,
 } from "@mui/material";
@@ -11,15 +8,12 @@ import "./Content.css";
 import React, { useEffect, useState } from "react";
 import MediaCard from "./contentCard";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import BuildIcon from "@mui/icons-material/Build";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import StarPurple500OutlinedIcon from "@mui/icons-material/StarPurple500Outlined";
 import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import AddchartIcon from "@mui/icons-material/Addchart";
-import LanguageIcon from "@mui/icons-material/Language";
 import image1 from "../../images/iPhone.png";
 import image2 from "../../images/appstore.png";
 import image3 from "../../images/googleapp.png";
@@ -30,6 +24,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getLatestNews } from "../../redux/newsActions";
 import Carousel, { CarouselItem } from "../reusableCompts/carousel/Carousel";
 import { useTheme } from "@emotion/react";
+import Spinner from '../reusableCompts/spinner/Spinner'
 
 const truncateString = (str, num) => {
     if (str?.length > num) {
@@ -78,6 +73,7 @@ const Contents = () => {
     
     const {news, loading} = useSelector((state) => state.news);
     const dispatch = useDispatch();
+
     let arr = [news[0],news[1],news[2],news[3],news[4],news[5],news[6],news[7]]
 
     useEffect(() => {
@@ -98,7 +94,7 @@ const Contents = () => {
     };
 
     return (
-        <Box sx={{ paddingLeft: "15px", paddingRight: "15px" }}>
+        <Box className="main-box">
             <DashContainer>
                 <DashLeft>
                     <MediaCard>
@@ -355,13 +351,16 @@ const Contents = () => {
                             </Box>
                             <DashLeftInnerCards>
                                 {loading ? (
-                                    <h4>Loading</h4>
+                                    <div className="spinner-div">
+                                        <Spinner />
+                                    </div>
                                 ) : (
                                     _news?.map((item, index) => (
                                         <Box key={index} className="news-body">
                                             <Box className="news-image">
                                                 <img
                                                     className="image"
+                                                    style={{objectFit: 'contain', overflow: 'hidden'}}
                                                     src={item.urlToImage}
                                                     alt="news"
                                                 />
