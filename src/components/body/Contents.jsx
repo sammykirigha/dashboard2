@@ -110,6 +110,8 @@ const Contents = () => {
                                     <select
                                         onChange={onChange}
                                         className="select"
+                                        data-testid='select'
+                                        value={values}
                                     >
                                         {options.map((option) => (
                                             <option value={option.value}>
@@ -142,7 +144,7 @@ const Contents = () => {
                             <div className="card-content1">
                                 <div className="card-header">
                                     <FormatListBulletedIcon className="icon" />
-                                    <span className="card-content-span1">
+                                    <span data-testid='orders' className="card-content-span1">
                                         Orders
                                     </span>
                                 </div>

@@ -1,5 +1,4 @@
 import { Box, ListItem, ListItemIcon, ListItemText } from '@mui/material'
-import { blue } from '@mui/material/colors';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ListItem.css'
