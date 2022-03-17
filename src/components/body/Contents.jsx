@@ -4,19 +4,18 @@ import React, { useEffect, useState } from "react";
 import BuildIcon from "@mui/icons-material/Build";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
-import AddchartIcon from "@mui/icons-material/Addchart";
 import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 import OpenInNewOutlinedIcon from "@mui/icons-material/OpenInNewOutlined";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import { useDispatch, useSelector } from "react-redux";
 import { getLatestNews } from "../../redux/newsActions";
-import Carousel, { CarouselItem } from "../reusableCompts/carousel/Carousel";
 import { useTheme } from "@emotion/react";
 import Spinner from "../reusableCompts/spinner/Spinner";
 import { CardContent } from "./FirstCard/card-content";
 import CardContentTwo from "./SecondCard/card-content-two";
 import image1 from "../../images/iPhone.png";
 import AdvertCard from "./AdvertCard/advert-card";
+import ExtensionCard from "./ExtensionCard/extension-card";
 
 const truncateString = (str, num) => {
     if (str?.length > num) {
@@ -57,99 +56,7 @@ const Contents = () => {
                     <CardContent />
                     <CardContentTwo />
                     <AdvertCard />
-                    <CardContent>
-                        <Box className="config-box">
-                            <Box className="config-header-box">
-                                <AddchartIcon className="config-add-icon" />
-                                <Typography
-                                    component="p"
-                                    className="config-header"
-                                >
-                                    Extensions marketplace
-                                </Typography>
-                            </Box>
-                            <Box className="exten-main">
-                                <Carousel>
-                                    <CarouselItem>
-                                        <Box className="exten-box2">
-                                            <Box
-                                                className="exten-icon2"
-                                                style={{
-                                                    backgroundColor: "#FFA26B",
-                                                }}
-                                            >
-                                                <Typography className="extension-icon-text">
-                                                    +50
-                                                </Typography>
-                                                <Typography className="extension-icon-text">
-                                                    Prodotti
-                                                </Typography>
-                                            </Box>
-                                            <Typography className="exten-text">
-                                                Connect to your own domain
-                                            </Typography>
-                                        </Box>
-                                    </CarouselItem>
-                                    <CarouselItem>
-                                        <Box className="exten-box2">
-                                            <Box
-                                                className="exten-icon2"
-                                                style={{
-                                                    backgroundColor: "blue",
-                                                }}
-                                            >
-                                                <Typography className="extension-icon-text">
-                                                    +50
-                                                </Typography>
-                                                <Typography className="extension-icon-text">
-                                                    Prodotti
-                                                </Typography>
-                                            </Box>
-                                            <Typography className="exten-text">
-                                                50 Additional Products
-                                            </Typography>
-                                        </Box>
-                                    </CarouselItem>
-                                    <CarouselItem>
-                                        <Box className="exten-box2">
-                                            <Box
-                                                className="exten-icon2"
-                                                style={{
-                                                    backgroundColor: "#00C48C",
-                                                }}
-                                            >
-                                                <Typography className="extension-icon-text">
-                                                    +50
-                                                </Typography>
-                                                <Typography className="extension-icon-text">
-                                                    Prodotti
-                                                </Typography>
-                                            </Box>
-                                            <Typography className="exten-text">
-                                                50 Additional Products
-                                            </Typography>
-                                        </Box>
-                                    </CarouselItem>
-                                </Carousel>
-                            </Box>
-                            <Box style={{ marginTop: "25px" }}>
-                                <Typography
-                                    component="div"
-                                    style={{ paddingTop: "5px" }}
-                                    className="config-link"
-                                >
-                                    Discover all Extensions!
-                                    <ArrowForwardIcon
-                                        style={{
-                                            height: "20px",
-                                            width: "25px",
-                                            marginLeft: "7px",
-                                        }}
-                                    />
-                                </Typography>
-                            </Box>
-                        </Box>
-                    </CardContent>
+                    <ExtensionCard />
                     <DashLeftInner>
                         <CardContent>
                             <Box className="news-box">
@@ -438,6 +345,7 @@ const DashLeft = styled(Box)(({ theme }) => ({
     display: "flex",
     gridTemplateColumns: "repeat(auto-fill, 1fr)",
     flexDirection: "column",
+    justifyContent: 'center',
     [theme.breakpoints.up("md")]: {
         flex: 2,
         display: "grid",
