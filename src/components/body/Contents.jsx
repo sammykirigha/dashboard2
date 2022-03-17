@@ -1,9 +1,4 @@
-import {
-    Avatar,
-    Box,
-    styled,
-    Typography,
-} from "@mui/material";
+import { Avatar, Box, styled, Typography } from "@mui/material";
 import "./Content.css";
 import React, { useEffect, useState } from "react";
 import MediaCard from "./contentCard";
@@ -24,7 +19,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getLatestNews } from "../../redux/newsActions";
 import Carousel, { CarouselItem } from "../reusableCompts/carousel/Carousel";
 import { useTheme } from "@emotion/react";
-import Spinner from '../reusableCompts/spinner/Spinner'
+import Spinner from "../reusableCompts/spinner/Spinner";
 
 const truncateString = (str, num) => {
     if (str?.length > num) {
@@ -70,16 +65,24 @@ const Contents = () => {
     const [_news, setNews] = useState([]);
     const [values, setValues] = useState(5678);
     const [orders, setOrders] = useState({ num: "100", price: "5688.33" });
-    
-    const {news, loading} = useSelector((state) => state.news);
+
+    const { news, loading } = useSelector((state) => state.news);
     const dispatch = useDispatch();
 
-    let arr = [news[0],news[1],news[2],news[3],news[4],news[5],news[6],news[7]]
-
     useEffect(() => {
+        let arr = [
+            news[0],
+            news[1],
+            news[2],
+            news[3],
+            news[4],
+            news[5],
+            news[6],
+            news[7],
+        ];
         dispatch(getLatestNews());
-        setNews(arr);
-    }, []);
+        // setNews(arr);
+    }, [dispatch]);
 
     console.log(_news);
 
@@ -92,7 +95,6 @@ const Contents = () => {
         const { value } = e.target;
         setOrders(JSON.parse(value));
     };
-
     return (
         <Box className="main-box">
             <DashContainer>
@@ -102,7 +104,10 @@ const Contents = () => {
                             <div className="card-content1">
                                 <div className="card-header">
                                     <RemoveRedEyeOutlinedIcon className="icon" />
-                                    <span data-testid='values' className="card-content-span1">
+                                    <span
+                                        data-testid="values"
+                                        className="card-content-span1"
+                                    >
                                         Visitors
                                     </span>
                                 </div>
@@ -110,7 +115,7 @@ const Contents = () => {
                                     <select
                                         onChange={onChange}
                                         className="select"
-                                        data-testid='select'
+                                        data-testid="select"
                                         value={values}
                                     >
                                         {options.map((option) => (
@@ -144,7 +149,10 @@ const Contents = () => {
                             <div className="card-content1">
                                 <div className="card-header">
                                     <FormatListBulletedIcon className="icon" />
-                                    <span data-testid='orders' className="card-content-span1">
+                                    <span
+                                        data-testid="orders"
+                                        className="card-content-span1"
+                                    >
                                         Orders
                                     </span>
                                 </div>
@@ -152,6 +160,7 @@ const Contents = () => {
                                     <select
                                         onChange={ordersChange}
                                         className="select"
+                                        data-testid="order-select"
                                     >
                                         {optionsB.map((option, index) => (
                                             <option
@@ -362,7 +371,10 @@ const Contents = () => {
                                             <Box className="news-image">
                                                 <img
                                                     className="image"
-                                                    style={{objectFit: 'contain', overflow: 'hidden'}}
+                                                    style={{
+                                                        objectFit: "contain",
+                                                        overflow: "hidden",
+                                                    }}
                                                     src={item.urlToImage}
                                                     alt="news"
                                                 />
@@ -595,34 +607,40 @@ const Contents = () => {
 const DashContainer = styled(Box)(({ theme }) => ({
     display: "flex",
     width: "100%",
-    gap: "20px",
+    gap: "10px",
     transform: "translateY(-35px)",
     flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "center",
+    // backgroundColor: "red",
     [theme.breakpoints.up("lg")]: {
         flexDirection: "row",
     },
 }));
 
 const DashLeft = styled(Box)(({ theme }) => ({
-    display:"flex",
-    flexDirection:"column",
-    alignItems: "start",
-    gap: "20px",
+    display: "flex",
+    gridTemplateColumns: "repeat(auto-fill, 1fr)",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    // backgroundColor: "yellow",
     [theme.breakpoints.up("md")]: {
         flex: 2,
         display: "grid",
-        gap: "20px",
+        gap: "10px",
         gridTemplateColumns: "repeat(auto-fill, 1fr)",
     },
-    gap: "20px",
-    
 }));
 
 const DashRight = styled(Box)(() => ({
     flex: 1,
     display: "flex",
     flexDirection: "column",
-    gap: "20px",
+    justifyContent: "flex-start",
+    alignItems: "flext-start",
+    gap: "10px",
+    // backgroundColor: "blue",
 }));
 
 const DashLeftInnerCards = styled(Box)(() => ({

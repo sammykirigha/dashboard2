@@ -1,5 +1,5 @@
 .main-box {
-    padding: 0px 15px;
+    padding: 0px 20px;
 }
 
 .spinner-div {
@@ -11,14 +11,13 @@
 .icon {
     width: 23px;
     height: 23px;
-    color: #103B66;
+    color: #103b66;
 }
 
 .icon2 {
     color: #666666;
     width: 23px;
     height: 23px;
-
 }
 
 .visitors-number {
@@ -31,12 +30,12 @@
     display: flex;
     align-items: center;
     /* justify-content: center; */
-    color: #103B66;
+    color: #103b66;
 }
 
 .visitors-info {
-    padding-top: 30px;
-    color: #21B8F9;
+    padding-top: 28px;
+    color: #21b8f9;
     margin-top: 10px;
     cursor: pointer;
     display: flex;
@@ -76,7 +75,7 @@
     line-height: 22px;
     display: flex;
     align-items: center;
-    color: #6C7C8C;
+    color: #6c7c8c;
 }
 
 .orders-quantity {
@@ -88,10 +87,10 @@
     display: flex;
     align-items: center;
     text-align: right;
-    color: #103B66;
+    color: #103b66;
 }
 
-.orders-up-section2{
+.orders-up-section2 {
     margin-top: 20px;
     display: flex;
     align-items: flex-start;
@@ -101,20 +100,19 @@
     font-weight: normal;
     font-size: 17px;
     line-height: 22px;
-    color: #6C7C8C;
+    color: #6c7c8c;
 }
 
-.orders-down{
+.orders-down {
     padding: 20px 0px;
-    color: #21B8F9;
+    color: #21b8f9;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
-
 
 .config-text {
     font-family: Roboto;
@@ -124,7 +122,7 @@
     line-height: 27px;
     display: flex;
     align-items: center;
-    color: #103B66;
+    color: #103b66;
 }
 
 .complete-box {
@@ -135,7 +133,7 @@
     line-height: 39px;
     display: flex;
     flex-direction: column;
-    color: #FFA26B;
+    color: #ffa26b;
     justify-content: flex-start;
     margin-top: 10px;
 }
@@ -148,7 +146,7 @@
     line-height: 22px !important;
     display: flex;
     align-items: center;
-    color: #103B66;
+    color: #103b66;
     /* width: 80%; */
 }
 
@@ -163,13 +161,14 @@
     align-items: center;
     text-align: center;
     text-decoration-line: underline;
-    color: #21B8F9;
+    color: #21b8f9;
     cursor: pointer;
 }
 
 .trust-pilot {
     background: #000032;
-    box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.08), 0px 4px 8px rgba(50, 50, 71, 0.06);
+    box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.08),
+        0px 4px 8px rgba(50, 50, 71, 0.06);
     border-radius: 10px;
 }
 
@@ -181,7 +180,7 @@
     line-height: 27px !important;
     display: flex;
     align-items: center;
-    color: #ffffff
+    color: #ffffff;
 }
 
 .trust-paragraph {
@@ -192,7 +191,7 @@
     line-height: 22px !important;
     display: flex;
     align-items: center;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .trust-link {
@@ -206,24 +205,23 @@
     align-items: center;
     text-align: center;
     text-decoration-line: underline;
-    color: #00C48C;
+    color: #00c48c;
     cursor: pointer;
 }
 
 .icon-box {
     display: flex;
-     align-items: center; 
-     padding-top: 15px; 
-     padding-left: 15px;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 15px;
 }
 
 .trust-icon {
-    height: 35px; 
+    height: 35px;
     width: 35px;
     margin-right: 0px;
-    color: #00B67A;
+    color: #00b67a;
 }
-
 
 .invite-paragraph {
     margin: 20px 0px;
@@ -243,7 +241,7 @@
     align-items: center;
     text-align: center;
     text-decoration-line: underline;
-    color: #21B8F9;
+    color: #21b8f9;
     cursor: pointer;
     margin-bottom: 10px;
 }
@@ -266,16 +264,16 @@
     line-height: 24px !important;
     display: flex;
     align-items: center;
-    color: #103B66;
+    color: #103b66;
 }
 
 .customer-button {
     width: 130px;
     height: 40px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-family: Roboto;
     font-size: 16px !important;
-    background: #21B8F9;
+    background: #21b8f9;
     outline: 0 !important;
     font-weight: 600;
     cursor: pointer;
@@ -287,23 +285,23 @@
     display: flex;
     padding: 10px;
     flex-direction: column;
-    background: #F3A35C;
-    box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.08), 0px 4px 8px rgba(50, 50, 71, 0.06);
+    background: #f3a35c;
+    box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.08),
+        0px 4px 8px rgba(50, 50, 71, 0.06);
     border-radius: 10px;
 }
 
 .add-body {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.add-text-box{
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: flex-start;
-
+.add-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .add-paragraph {
@@ -313,7 +311,7 @@ align-items: flex-start;
     font-weight: 500 !important;
     font-size: 22px !important;
     line-height: 27px;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .add-link-box {
@@ -330,7 +328,7 @@ align-items: flex-start;
     font-size: 17px !important;
     line-height: 20px !important;
     text-decoration-line: underline;
-    color: #FFFFFF;
+    color: #ffffff;
     cursor: pointer;
 }
 
@@ -341,7 +339,7 @@ align-items: flex-start;
     color: white;
 }
 
-.add-image-div{
+.add-image-div {
     width: 50%;
     display: flex;
     justify-content: flex-end;
@@ -366,7 +364,7 @@ align-items: flex-start;
     height: 50px;
 }
 
-.config-box{
+.config-box {
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -378,14 +376,14 @@ align-items: flex-start;
 }
 
 .config-header {
-    font-family:Roboto;
+    font-family: Roboto;
     font-style: normal;
     font-weight: 500 !important;
     font-size: 20px !important;
     line-height: 25px !important;
     display: flex;
     align-items: center;
-    color: #103B66;
+    color: #103b66;
 }
 
 .config-add-icon {
@@ -402,9 +400,9 @@ align-items: flex-start;
 }
 
 .exten-box {
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .exten-box2 {
@@ -415,17 +413,17 @@ justify-content: space-between;
 }
 
 .exten-icon {
-width: 155px;
-height: 155px;
-background: #FFA26B;
-border-radius: 10px;
-display: flex;
-justify-content: center;
-align-items: center;
+    width: 155px;
+    height: 155px;
+    background: #ffa26b;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .extension-icon {
-    color: #ffffff; 
+    color: #ffffff;
     width: 100px !important;
     height: 100px !important;
 }
@@ -433,14 +431,14 @@ align-items: center;
 .exten-icon2 {
     width: 155px;
     height: 155px;
-    background: #00C48C;
+    background: #00c48c;
     border-radius: 10px;
     display: flex;
     color: #ffffff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    }
+}
 
 .exten-text {
     padding-top: 10px;
@@ -449,7 +447,7 @@ align-items: center;
     font-weight: normal;
     font-size: 17px !important;
     line-height: 20px !important;
-    color: #103B66 !important;
+    color: #103b66 !important;
 }
 
 .extension-icon-text {
@@ -459,7 +457,7 @@ align-items: center;
     font-size: 34px !important;
     line-height: 39px !important;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .news-box {
@@ -477,36 +475,36 @@ align-items: center;
 }
 
 .news-icon {
-margin-right: 10px;
-color: #103B66;
-height: 23px;
+    margin-right: 10px;
+    color: #103b66;
+    height: 23px;
 }
 
 .news-text1 {
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 22px !important;
-display: flex;
-align-items: center;
-color: #103B66;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px !important;
+    display: flex;
+    align-items: center;
+    color: #103b66;
 }
 
 .news-text2 {
-margin-right: 10px;
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 17px !important;
-display: flex;
-align-items: center;
-text-align: right;
-text-decoration-line: underline;
-color: #21B8F9;
-cursor: pointer;
+    margin-right: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px !important;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    text-decoration-line: underline;
+    color: #21b8f9;
+    cursor: pointer;
 }
 
-.news-body{
+.news-body {
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -539,27 +537,27 @@ cursor: pointer;
 }
 
 .news-h6 {
-font-family: Roboto;
-font-size: 11px !important;
-text-transform: uppercase;
-color: #21B8F9;
+    font-family: Roboto;
+    font-size: 11px !important;
+    text-transform: uppercase;
+    color: #21b8f9;
 }
 
 .news-paragraph {
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 15px !important;
-color: #103B66;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px !important;
+    color: #103b66;
 }
 
 .news-link {
-font-family: Roboto;
-font-style: normal;
-font-weight: 300 !important;
-font-size: 12 !important;
-text-decoration-line: underline;
-color: #103B66;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300 !important;
+    font-size: 12 !important;
+    text-decoration-line: underline;
+    color: #103b66;
 }
 
 .card-box {
@@ -569,16 +567,16 @@ color: #103B66;
 .card-content1 {
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
 }
 
 .card-header {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
 
-.card-content-span1{
+.card-content-span1 {
     margin-left: 10px;
     font-family: Roboto;
     font-style: normal;
@@ -587,10 +585,10 @@ color: #103B66;
     line-height: 25px;
     display: flex;
     align-items: center;
-    color: #103B66;
+    color: #103b66;
 }
 
-.card-content-span2{
+.card-content-span2 {
     margin-left: 10px;
     font-family: Roboto !important;
     font-style: normal;
@@ -606,19 +604,19 @@ color: #103B66;
 
 .card-content2 {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
-.card-content2 h2{
+.card-content2 h2 {
     margin-left: 10px;
-    font-size: 25px; 
-    color: #103B66;
-    font-weight: 500
+    font-size: 25px;
+    color: #103b66;
+    font-weight: 500;
 }
 
 .select {
     outline: 0px;
-    width: 150px; 
+    width: 150px;
     border: 0px;
     text-indent: 10px;
     font-size: 14px;
