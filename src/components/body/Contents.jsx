@@ -1,17 +1,10 @@
 import { Avatar, Box, styled, Typography } from "@mui/material";
 import "./Content.css";
 import React, { useEffect, useState } from "react";
-import MediaCard from "./contentCard";
-import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
-import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
-import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import BuildIcon from "@mui/icons-material/Build";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import AddchartIcon from "@mui/icons-material/Addchart";
-import image1 from "../../images/iPhone.png";
-import image2 from "../../images/appstore.png";
-import image3 from "../../images/googleapp.png";
 import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 import OpenInNewOutlinedIcon from "@mui/icons-material/OpenInNewOutlined";
 import StarRateIcon from "@mui/icons-material/StarRate";
@@ -20,6 +13,10 @@ import { getLatestNews } from "../../redux/newsActions";
 import Carousel, { CarouselItem } from "../reusableCompts/carousel/Carousel";
 import { useTheme } from "@emotion/react";
 import Spinner from "../reusableCompts/spinner/Spinner";
+import { CardContent } from "./FirstCard/card-content";
+import CardContentTwo from "./SecondCard/card-content-two";
+import image1 from "../../images/iPhone.png";
+import AdvertCard from "./AdvertCard/advert-card";
 
 const truncateString = (str, num) => {
     if (str?.length > num) {
@@ -30,41 +27,9 @@ const truncateString = (str, num) => {
     }
 };
 
-const options = [
-    {
-        label: "This Month",
-        value: "1235",
-    },
-    {
-        label: "Next Month",
-        value: "4563",
-    },
-    {
-        label: "Last Month",
-        value: "7890",
-    },
-];
-
-const optionsB = [
-    {
-        label: "This Year",
-        value: { num: "567", price: "7865.65" },
-    },
-    {
-        label: "Next Year",
-        value: { num: "467", price: "9565.78" },
-    },
-    {
-        label: "Last Year",
-        value: { num: "127", price: "2065.43" },
-    },
-];
-
 const Contents = () => {
     const theme = useTheme();
     const [_news, setNews] = useState([]);
-    const [values, setValues] = useState(5678);
-    const [orders, setOrders] = useState({ num: "100", price: "5688.33" });
 
     const { news, loading } = useSelector((state) => state.news);
     const dispatch = useDispatch();
@@ -85,162 +50,14 @@ const Contents = () => {
     }, [dispatch]);
 
     console.log(_news);
-
-    const onChange = (e) => {
-        const { value } = e.target;
-        setValues(value);
-    };
-
-    const ordersChange = (e) => {
-        const { value } = e.target;
-        setOrders(JSON.parse(value));
-    };
     return (
         <Box className="main-box">
             <DashContainer>
                 <DashLeft>
-                    <MediaCard>
-                        <div className="card-box">
-                            <div className="card-content1">
-                                <div className="card-header">
-                                    <RemoveRedEyeOutlinedIcon className="icon" />
-                                    <span
-                                        data-testid="values"
-                                        className="card-content-span1"
-                                    >
-                                        Visitors
-                                    </span>
-                                </div>
-                                <div className="card-header">
-                                    <select
-                                        onChange={onChange}
-                                        className="select"
-                                        data-testid="select"
-                                        value={values}
-                                    >
-                                        {options.map((option) => (
-                                            <option value={option.value}>
-                                                {option.label}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
-                            </div>
-                            <div className="card-content2">
-                                <span className="visitors-number">
-                                    {values}
-                                </span>
-                                <div className="visitors-info">
-                                    <span className="config-link">
-                                        Do you want more visits? Contact us!
-                                    </span>
-                                    <ArrowForwardOutlinedIcon
-                                        style={{
-                                            width: "18px",
-                                            marginLeft: "5px",
-                                        }}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </MediaCard>
-                    <MediaCard>
-                        <div className="card-box">
-                            <div className="card-content1">
-                                <div className="card-header">
-                                    <FormatListBulletedIcon className="icon" />
-                                    <span
-                                        data-testid="orders"
-                                        className="card-content-span1"
-                                    >
-                                        Orders
-                                    </span>
-                                </div>
-                                <div className="card-header">
-                                    <select
-                                        onChange={ordersChange}
-                                        className="select"
-                                        data-testid="order-select"
-                                    >
-                                        {optionsB.map((option, index) => (
-                                            <option
-                                                value={JSON.stringify(
-                                                    option.value
-                                                )}
-                                            >
-                                                {option.label}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
-                            </div>
-                            <div className="card-content2">
-                                <div className="orders">
-                                    <div className="orders-up">
-                                        <div className="orders-up-section1">
-                                            <div className="orders-received">
-                                                Orders Received:{" "}
-                                            </div>
-                                            <div className="orders-quantity">
-                                                {orders.num}
-                                            </div>
-                                        </div>
-                                        <div className="orders-up-section2">
-                                            <div className="orders-received">
-                                                Earnings:{" "}
-                                            </div>
-                                            <div className="orders-quantity">
-                                                ${orders.price}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="orders-down">
-                                        <span className="config-link">
-                                            10 free tips to increase your sales
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </MediaCard>
-                    <MediaCard>
-                        <Box className="add-box">
-                            <Box className="add-body">
-                                <Box className="add-text-box">
-                                    <Typography className="add-paragraph">
-                                        Sell your products on your exclusive APP
-                                        published on the stores
-                                    </Typography>
-                                    <Typography className="add-link-box">
-                                        <span className="add-link">
-                                            Show more
-                                        </span>
-                                        <ArrowForwardIcon className="arrowForward" />
-                                    </Typography>
-                                </Box>
-                                <Box className="add-image-div">
-                                    <img
-                                        className="phone-image"
-                                        src={image1}
-                                        alt="phone"
-                                    />
-                                </Box>
-                            </Box>
-                            <Box className="images">
-                                <img
-                                    className="playStore"
-                                    src={image2}
-                                    alt="phone"
-                                />
-                                <img
-                                    className="playStore"
-                                    src={image3}
-                                    alt="phone"
-                                />
-                            </Box>
-                        </Box>
-                    </MediaCard>
-                    <MediaCard>
+                    <CardContent />
+                    <CardContentTwo />
+                    <AdvertCard />
+                    <CardContent>
                         <Box className="config-box">
                             <Box className="config-header-box">
                                 <AddchartIcon className="config-add-icon" />
@@ -332,9 +149,9 @@ const Contents = () => {
                                 </Typography>
                             </Box>
                         </Box>
-                    </MediaCard>
+                    </CardContent>
                     <DashLeftInner>
-                        <MediaCard>
+                        <CardContent>
                             <Box className="news-box">
                                 <Box className="news-main">
                                     <FeedOutlinedIcon className="news-icon" />
@@ -411,11 +228,11 @@ const Contents = () => {
                                     ))
                                 )}
                             </DashLeftInnerCards>
-                        </MediaCard>
+                        </CardContent>
                     </DashLeftInner>
                 </DashLeft>
                 <DashRight>
-                    <MediaCard>
+                    <CardContent>
                         <Box style={{ padding: "10px" }}>
                             <Box
                                 style={{
@@ -465,8 +282,8 @@ const Contents = () => {
                                 </Typography>
                             </Box>
                         </Box>
-                    </MediaCard>
-                    <MediaCard>
+                    </CardContent>
+                    <CardContent>
                         <Box className="trust-pilot">
                             <Box className="icon-box">
                                 <StarRateIcon className="trust-icon" />
@@ -507,8 +324,8 @@ const Contents = () => {
                                 </Typography>
                             </Box>
                         </Box>
-                    </MediaCard>
-                    <MediaCard>
+                    </CardContent>
+                    <CardContent>
                         <Box style={{ padding: "15px" }}>
                             <Box
                                 style={{
@@ -557,8 +374,8 @@ const Contents = () => {
                                 </Typography>
                             </Box>
                         </Box>
-                    </MediaCard>
-                    <MediaCard>
+                    </CardContent>
+                    <CardContent>
                         <Box style={{ padding: "10px" }}>
                             <Box
                                 style={{
@@ -597,7 +414,7 @@ const Contents = () => {
                                 </button>
                             </div>
                         </Box>
-                    </MediaCard>
+                    </CardContent>
                 </DashRight>
             </DashContainer>
         </Box>
@@ -608,11 +425,10 @@ const DashContainer = styled(Box)(({ theme }) => ({
     display: "flex",
     width: "100%",
     gap: "10px",
-    transform: "translateY(-35px)",
+    transform: "translateY(-30px)",
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "center",
-    // backgroundColor: "red",
     [theme.breakpoints.up("lg")]: {
         flexDirection: "row",
     },
@@ -622,9 +438,6 @@ const DashLeft = styled(Box)(({ theme }) => ({
     display: "flex",
     gridTemplateColumns: "repeat(auto-fill, 1fr)",
     flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    // backgroundColor: "yellow",
     [theme.breakpoints.up("md")]: {
         flex: 2,
         display: "grid",
@@ -640,7 +453,6 @@ const DashRight = styled(Box)(() => ({
     justifyContent: "flex-start",
     alignItems: "flext-start",
     gap: "10px",
-    // backgroundColor: "blue",
 }));
 
 const DashLeftInnerCards = styled(Box)(() => ({

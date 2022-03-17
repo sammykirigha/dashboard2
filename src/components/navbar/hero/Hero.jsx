@@ -1,4 +1,4 @@
-import { Box, CssBaseline, Grid, Link } from "@mui/material";
+import { CssBaseline, Grid, Link } from "@mui/material";
 import React from "react";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import "./Hero.css";

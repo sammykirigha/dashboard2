@@ -67,7 +67,6 @@ const DrawerHeader = styled("div")(({ theme }) => ({
     display: "flex",
     alignItems: "center",
     padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: "flex-end",
 }));
@@ -79,17 +78,14 @@ const drawerStyles = {
     justifyContent: "center",
 };
 
-export default function PersistentDrawer({ children }) {
+export const MyDrawer = ({ children }) => {
     const [open, setOpen] = React.useState(false);
-
     const handleDrawerOpen = () => {
         setOpen(true);
     };
-
     const handleDrawerClose = () => {
         setOpen(false);
     };
-
     return (
         <Box style={drawerStyles}>
             <CssBaseline />
@@ -130,4 +126,4 @@ export default function PersistentDrawer({ children }) {
             </Main>
         </Box>
     );
-}
+};

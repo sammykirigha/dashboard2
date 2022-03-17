@@ -1,7 +1,7 @@
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import Contents from "./components/body/Contents";
 import HeroSection from "./components/navbar/hero/Hero";
-import PersistentDrawer from "./components/Drawer";
+import { MyDrawer } from "./components/Drawer";
 import { Route, Routes } from "react-router-dom";
 import OneRoute from "./components/reusableCompts/OneRoute";
 import Marketing from "./components/reusableCompts/Marketing";
@@ -10,7 +10,7 @@ function App() {
     return (
         <Grid container>
             <Grid item xs={12}>
-                <PersistentDrawer>
+                <MyDrawer>
                     <Routes>
                         <Route
                             exact
@@ -233,7 +233,7 @@ function App() {
                             }
                         />
                     </Routes>
-                </PersistentDrawer>
+                </MyDrawer>
             </Grid>
         </Grid>
     );
