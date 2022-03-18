@@ -16,6 +16,8 @@ import CardContentTwo from "./SecondCard/card-content-two";
 import image1 from "../../images/iPhone.png";
 import AdvertCard from "./AdvertCard/advert-card";
 import ExtensionCard from "./ExtensionCard/extension-card";
+import FirstCard from "./DashboardRightCards/FirstCard/first-card";
+import SecondCard from "./DashboardRightCards/SecondCard/second-card";
 
 const truncateString = (str, num) => {
     if (str?.length > num) {
@@ -139,99 +141,8 @@ const Contents = () => {
                     </DashLeftInner>
                 </DashLeft>
                 <DashRight>
-                    <CardContent>
-                        <Box style={{ padding: "10px" }}>
-                            <Box
-                                style={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                }}
-                            >
-                                <BuildIcon
-                                    style={{
-                                        height: "20px",
-                                        width: "20px",
-                                        marginRight: "10px",
-                                    }}
-                                />
-                                <Typography className="config-text">
-                                    Configure your shop
-                                </Typography>
-                            </Box>
-                            <Box className="complete-box">
-                                <Typography className="complete-box">
-                                    45%
-                                </Typography>
-                                <Typography component="span">
-                                    completed
-                                </Typography>
-                            </Box>
-                            <Box style={{ margin: "15px 0px", width: "90%" }}>
-                                <Typography
-                                    component="p"
-                                    className="config-paragraph"
-                                >
-                                    Complete all the steps to have a complete
-                                    shop to best present to your customers.
-                                </Typography>
-                                <Typography
-                                    component="div"
-                                    className="config-link"
-                                >
-                                    Complete the setup!
-                                    <ArrowForwardIcon
-                                        style={{
-                                            height: "20px",
-                                            width: "25px",
-                                            marginLeft: "7px",
-                                        }}
-                                    />
-                                </Typography>
-                            </Box>
-                        </Box>
-                    </CardContent>
-                    <CardContent>
-                        <Box className="trust-pilot">
-                            <Box className="icon-box">
-                                <StarRateIcon className="trust-icon" />
-                                <Typography
-                                    component="p"
-                                    className="trust-text"
-                                >
-                                    Trustpilot
-                                </Typography>
-                            </Box>
-                            <Box
-                                style={{
-                                    marginTop: "15px",
-                                    padding: "20px",
-                                    width: "90%",
-                                }}
-                            >
-                                <Typography
-                                    component="p"
-                                    className="trust-paragraph"
-                                >
-                                    Show us your love by leaving a positive
-                                    review on trust pilot and receive the
-                                    extension of 50 additional products
-                                </Typography>
-                                <Typography
-                                    component="div"
-                                    className="trust-link"
-                                >
-                                    Complete the setup!
-                                    <ArrowForwardIcon
-                                        style={{
-                                            height: "20px",
-                                            width: "25px",
-                                            marginLeft: "7px",
-                                        }}
-                                    />
-                                </Typography>
-                            </Box>
-                        </Box>
-                    </CardContent>
+                    <FirstCard />
+                    <SecondCard />
                     <CardContent>
                         <Box style={{ padding: "15px" }}>
                             <Box

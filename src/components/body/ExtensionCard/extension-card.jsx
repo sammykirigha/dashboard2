@@ -67,7 +67,7 @@ const ExtensionCard = () => {
                 <Box>
                     <Typography
                         component="div"
-                        className="link"
+                        className="links"
                     >
                         Discover all Extensions!
                         <ArrowForwardIcon style={iconStyle}/>

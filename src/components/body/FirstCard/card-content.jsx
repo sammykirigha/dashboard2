@@ -32,6 +32,7 @@ export const CardContent = () => {
     return (
         <Card className="card-content-box">
             <CardHeader
+                color={'red'}
                 headerText="Visitors"
                 icon={<RemoveRedEyeOutlinedIcon className="icon" />}
             >
