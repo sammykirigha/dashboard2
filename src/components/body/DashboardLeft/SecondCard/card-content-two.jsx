@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./card-content-two.css";
 import { Card } from "@mui/material";
-import CardHeader from "../../reusableCompts/cardHeader/card-header";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
-import CardBody from "../../reusableCompts/cardBody/card-body";
-import CardFooter from "../../reusableCompts/cardFooter/card-footer";
+import CardHeader from "../../../reusableCompts/cardHeader/card-header";
+import CardBody from "../../../reusableCompts/cardBody/card-body";
+import CardFooter from "../../../reusableCompts/cardFooter/card-footer";
+
 
 const optionsB = [
     {

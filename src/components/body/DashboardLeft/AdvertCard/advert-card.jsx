@@ -2,9 +2,9 @@ import { Card, Typography } from "@mui/material";
 import './advert-card.css'
 import { Box } from "@mui/system";
 import React from "react";
-import image1 from "../../../images/iPhone.png";
-import image2 from "../../../images/appstore.png";
-import image3 from "../../../images/googleapp.png";
+import image1 from "../../../../images/iPhone.png";
+import image2 from "../../../../images/appstore.png";
+import image3 from "../../../../images/googleapp.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const AdvertCard = () => {

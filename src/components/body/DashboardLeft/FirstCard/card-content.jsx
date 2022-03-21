@@ -1,11 +1,11 @@
 import * as React from "react";
 import "./card-content.css";
 import Card from "@mui/material/Card";
-import CardHeader from "../../reusableCompts/cardHeader/card-header";
-import CardBody from "../../reusableCompts/cardBody/card-body";
-import CardFooter from "../../reusableCompts/cardFooter/card-footer";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
+import CardHeader from "../../../reusableCompts/cardHeader/card-header";
+import CardBody from "../../../reusableCompts/cardBody/card-body";
+import CardFooter from "../../../reusableCompts/cardFooter/card-footer";
 
 const options = [
     {
@@ -48,7 +48,7 @@ export const CardContent = () => {
                 </select>
             </CardHeader>
             <CardBody>
-                <span className="visitors-number">{values}</span>
+              <span className="visitors-number">{values}</span>
             </CardBody>
             <CardFooter
                 footerIcon={

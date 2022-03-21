@@ -11,13 +11,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { getLatestNews } from "../../redux/newsActions";
 import { useTheme } from "@emotion/react";
 import Spinner from "../reusableCompts/spinner/Spinner";
-import { CardContent } from "./FirstCard/card-content";
-import CardContentTwo from "./SecondCard/card-content-two";
 import image1 from "../../images/iPhone.png";
-import AdvertCard from "./AdvertCard/advert-card";
-import ExtensionCard from "./ExtensionCard/extension-card";
+import { CardContent } from "./DashboardLeft/FirstCard/card-content";
+import CardContentTwo from "./DashboardLeft/SecondCard/card-content-two";
+import ExtensionCard from "./DashboardLeft/ExtensionCard/extension-card";
+import AdvertCard from "./DashboardLeft/AdvertCard/advert-card";
 import FirstCard from "./DashboardRightCards/FirstCard/first-card";
-import SecondCard from "./DashboardRightCards/SecondCard/second-card";
+import SecondCard from "./DashboardRightCards/SecondCard/second-card"; 
 
 const truncateString = (str, num) => {
     if (str?.length > num) {

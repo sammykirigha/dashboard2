@@ -4,7 +4,7 @@ import { Box } from "@mui/system";
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import AddchartIcon from "@mui/icons-material/Addchart";
-import Carousel, { CarouselItem } from "../../reusableCompts/carousel/Carousel";
+import Carousel, { CarouselItem } from "../../../reusableCompts/carousel/Carousel"
 
 const iconStyle = {
  height: "20px",

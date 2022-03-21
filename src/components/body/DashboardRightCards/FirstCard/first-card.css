@@ -1,5 +1,6 @@
 .first-card {
 padding: 10px;
+padding-left: 23px !important;
 max-height: 290px;
 max-width: 408px;
 }

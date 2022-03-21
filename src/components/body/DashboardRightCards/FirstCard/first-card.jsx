@@ -19,7 +19,7 @@ const footerStyle = {
 const FirstCard = () => {
     return (
         <Card className="first-card">
-			<CardHeader style={{color: 'red'}}
+			<CardHeader
                 icon={<BuildIcon className="icon" />}
 				headerText={"Configure your shop"}
             />

@@ -5,22 +5,27 @@ import "./second-card.css";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import CardBody from "../../../reusableCompts/cardBody/card-body";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Box } from "@mui/system";
+import { Box, padding } from "@mui/system";
 
-const iconStyle = {
-    height: "20px",
-    width: "25px",
-    marginLeft: "7px",
-};
 
 const footerStyle = {
     color: "#21b8f9",
     cursor: "pointer",
-    marginTop: "50px",
+    marginTop: "25px",
     display: "flex",
     alignItems: "center",
-    // paddingTop: "20px",
 };
+
+const configLink = {
+    fontFamily: 'Roboto',
+    fontStyle: 'normal',
+    fontWeight: '400',
+    fontSize: '17px !important',
+    textDecorationLine: 'underline',
+    color: '#21b8f9',
+    cursor: ' pointer',
+    paddingLeft: '12px'
+}
 
 const SecondCard = () => {
     return (
@@ -36,7 +41,7 @@ const SecondCard = () => {
                 </Typography>
             </CardBody>
             <div style={footerStyle}>
-                <span className="config-link">Complete the setup!</span>
+                <span style={configLink}>Complete the setup!</span>
                 <ArrowForwardIcon className="footer-icon" />
             </div>
         </Card>

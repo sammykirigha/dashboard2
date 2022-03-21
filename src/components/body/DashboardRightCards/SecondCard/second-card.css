@@ -27,7 +27,8 @@ background-color: #000032 !important;
     display: flex;
     align-items: center;
     color: #ffffff;
-	padding-top: 20px;
+	padding-top: 20px !important;
+    padding: 0px 15px;
 }
 
 .trust-link {
@@ -54,6 +55,7 @@ background-color: #000032 !important;
 .box-head {
 display: flex;
 align-items: center;
+padding-left: 8px;
 }
 
 .link-text {
