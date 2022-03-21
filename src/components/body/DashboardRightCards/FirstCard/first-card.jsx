@@ -28,7 +28,7 @@ const FirstCard = () => {
                     <Typography className="complete-box">45%</Typography>
                     <Typography component="span">completed</Typography>
                 </Box>
-                <Box style={{ margin: "15px 0px", width: "90%" }}>
+                <Box className='par-box'>
                     <Typography component="p" className="config-paragraph">
                         Complete all the steps to have a complete shop to best
                         present to your customers.

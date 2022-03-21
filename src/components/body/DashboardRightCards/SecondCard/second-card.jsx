@@ -1,11 +1,10 @@
 import { Card, Typography } from "@mui/material";
 import React from "react";
-import CardHeader from "../card-header";
 import "./second-card.css";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import CardBody from "../../../reusableCompts/cardBody/card-body";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Box, padding } from "@mui/system";
+import { Box } from "@mui/system";
 
 
 const footerStyle = {

@@ -1,23 +1,20 @@
-import { Avatar, Box, styled, Typography } from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 import "./Content.css";
 import React, { useEffect, useState } from "react";
-import BuildIcon from "@mui/icons-material/Build";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 import OpenInNewOutlinedIcon from "@mui/icons-material/OpenInNewOutlined";
-import StarRateIcon from "@mui/icons-material/StarRate";
 import { useDispatch, useSelector } from "react-redux";
 import { getLatestNews } from "../../redux/newsActions";
 import { useTheme } from "@emotion/react";
 import Spinner from "../reusableCompts/spinner/Spinner";
-import image1 from "../../images/iPhone.png";
 import { CardContent } from "./DashboardLeft/FirstCard/card-content";
 import CardContentTwo from "./DashboardLeft/SecondCard/card-content-two";
 import ExtensionCard from "./DashboardLeft/ExtensionCard/extension-card";
 import AdvertCard from "./DashboardLeft/AdvertCard/advert-card";
 import FirstCard from "./DashboardRightCards/FirstCard/first-card";
-import SecondCard from "./DashboardRightCards/SecondCard/second-card"; 
+import SecondCard from "./DashboardRightCards/SecondCard/second-card";
+import ThirdCard from "./DashboardRightCards/ThirdCard/third-card";
+import FourthCard from "./DashboardRightCards/FourthCard/fourth-card";
 
 const truncateString = (str, num) => {
     if (str?.length > num) {
@@ -143,96 +140,8 @@ const Contents = () => {
                 <DashRight>
                     <FirstCard />
                     <SecondCard />
-                    <CardContent>
-                        <Box style={{ padding: "15px" }}>
-                            <Box
-                                style={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                }}
-                            >
-                                <PeopleAltOutlinedIcon
-                                    style={{
-                                        height: "20px",
-                                        width: "20px",
-                                        marginRight: "10px",
-                                    }}
-                                />
-                                <Typography
-                                    component="p"
-                                    className="config-text"
-                                >
-                                    Invite friend
-                                </Typography>
-                            </Box>
-                            <Box style={{ width: "90%" }}>
-                                <Typography
-                                    component="p"
-                                    className="invite-paragraph"
-                                >
-                                    <strong style={{ color: "#00C48C" }}>
-                                        Receive 50 products
-                                    </strong>{" "}
-                                    by inviting a friend who subscribes to a
-                                    plan. Your friend will receive a 30%
-                                    discount coupon valid for any plan.
-                                </Typography>
-                                <Typography
-                                    component="div"
-                                    className="invite-link"
-                                >
-                                    Complete the setup!
-                                    <ArrowForwardIcon
-                                        style={{
-                                            height: "20px",
-                                            width: "25px",
-                                            marginLeft: "7px",
-                                        }}
-                                    />
-                                </Typography>
-                            </Box>
-                        </Box>
-                    </CardContent>
-                    <CardContent>
-                        <Box style={{ padding: "10px" }}>
-                            <Box
-                                style={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                }}
-                            >
-                                <BuildIcon
-                                    style={{
-                                        height: "20px",
-                                        width: "20px",
-                                        marginRight: "10px",
-                                    }}
-                                />
-                                <Typography
-                                    component="p"
-                                    className="config-text"
-                                >
-                                    Customer support
-                                </Typography>
-                            </Box>
-                            <Box className="customer-box">
-                                <Avatar alt="Sammy" src={image1} />
-                                <Typography
-                                    component="span"
-                                    className="customer-text"
-                                >
-                                    Simone is here to help you.
-                                </Typography>
-                            </Box>
-                            <div
-                                style={{ margin: "10px 0px", padding: "10px" }}
-                            >
-                                <button className="customer-button">
-                                    Contact us
-                                </button>
-                            </div>
-                        </Box>
-                    </CardContent>
+                    <ThirdCard />
+                    <FourthCard />
                 </DashRight>
             </DashContainer>
         </Box>
@@ -246,7 +155,8 @@ const DashContainer = styled(Box)(({ theme }) => ({
     transform: "translateY(-30px)",
     flexDirection: "column",
     alignItems: "flex-start",
-    justifyContent: "center",
+    justifyContent: "space-between",
+    // backgroundColor: 'red',
     [theme.breakpoints.up("lg")]: {
         flexDirection: "row",
     },
@@ -256,7 +166,8 @@ const DashLeft = styled(Box)(({ theme }) => ({
     display: "flex",
     gridTemplateColumns: "repeat(auto-fill, 1fr)",
     flexDirection: "column",
-    justifyContent: 'center',
+    justifyContent: "center",
+    // backgroundColor: 'blue',
     [theme.breakpoints.up("md")]: {
         flex: 2,
         display: "grid",
@@ -271,7 +182,8 @@ const DashRight = styled(Box)(() => ({
     flexDirection: "column",
     justifyContent: "flex-start",
     alignItems: "flext-start",
-    gap: "10px",
+    // backgroundColor: 'yellow',
+    gap: "20px",
 }));
 
 const DashLeftInnerCards = styled(Box)(() => ({

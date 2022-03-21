@@ -5,6 +5,11 @@ max-height: 290px;
 max-width: 408px;
 }
 
+.par-box {
+     margin: 15px 0px;
+     width: 90%
+}
+
 .icon {
 height: 20px;
 width: 20px;

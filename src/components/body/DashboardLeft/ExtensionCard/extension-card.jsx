@@ -12,6 +12,10 @@ const iconStyle = {
  marginLeft: "7px",
 }
 
+const footerBox = {
+    marginTop: '20px'
+}
+
 const ExtensionCard = () => {
     return (
         <Card className="exten-card">
@@ -64,7 +68,7 @@ const ExtensionCard = () => {
                             </Box>
                         </CarouselItem>
                     </Carousel>
-                <Box>
+                <Box style={footerBox}>
                     <Typography
                         component="div"
                         className="links"
