@@ -13,7 +13,7 @@ const iconStyle = {
 }
 
 const footerBox = {
-    marginTop: '20px'
+    marginTop: '10px'
 }
 
 const ExtensionCard = () => {

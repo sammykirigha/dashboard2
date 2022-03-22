@@ -54,7 +54,7 @@ export const CardContent = () => {
                 footerIcon={
                     <ArrowForwardOutlinedIcon className="footer-icon" />
                 }
-                linkText={"Do you want more visits? Contact us!"}
+                linkText={"You need more visits? Contact us!"}
             />
         </Card>
     );

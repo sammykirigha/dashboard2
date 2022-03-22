@@ -1,3 +1,9 @@
+.exten-card {
+    max-height: 343px;
+	max-width: 408px;
+    padding: 20px;
+}
+
 .config-header-box {
     display: flex;
     align-items: center;
