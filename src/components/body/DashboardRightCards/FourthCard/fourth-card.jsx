@@ -28,7 +28,7 @@ const FourthCard = () => {
             <Box className="customer-box">
                 <Avatar alt="Sammy" src={image1} />
                 <Typography component="span" className="customerText">
-                    Simone is here to help you.
+                    Simone is here to help you. Feel free to ask all your querries
                 </Typography>
             </Box>
             <div className="div">

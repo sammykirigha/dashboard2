@@ -35,7 +35,7 @@ const SecondCard = () => {
             </Box>
             <CardBody>
                 <Typography component="p" className="trust-paragraph">
-                    Show us your love by leaving a positive review on trust
+                    Show us your love by leaving a <strong style={{color: '#00C48C'}}>positive</strong>  review on trust
                     pilot and receive the extension of 50 additional products
                 </Typography>
             </CardBody>

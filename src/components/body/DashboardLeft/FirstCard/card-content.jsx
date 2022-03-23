@@ -22,6 +22,12 @@ const options = [
     },
 ];
 
+const selectStyle = {
+    border: '0px',
+    with: '100px',
+    outline:'0px'
+}
+
 export const CardContent = () => {
     const [values, setValues] = React.useState(5678);
 
@@ -38,7 +44,7 @@ export const CardContent = () => {
             >
                 <select
                     onChange={onChange}
-                    className="select"
+                    style={selectStyle}
                     data-testid="select"
                     value={values}
                 >

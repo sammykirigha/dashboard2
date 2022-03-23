@@ -22,6 +22,13 @@ const optionsB = [
     },
 ];
 
+const selectStyle = {
+    border: '0px',
+    with: '100px',
+    outline:'0px'
+}
+
+
 const CardContentTwo = () => {
     const [orders, setOrders] = useState({ num: "100", price: "5688.33" });
 
@@ -37,7 +44,7 @@ const CardContentTwo = () => {
             >
                 <select
                     onChange={ordersChange}
-                    className="select"
+                    style={selectStyle}
                     data-testid="select"
                     value={orders}
                 >

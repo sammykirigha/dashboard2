@@ -8,9 +8,11 @@
 .invite-paragraph {
     margin: 20px 0px;
     font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
     font-size: 17px !important;
     line-height: 22px !important;
-    color: black;
+    color: #103b66;
 }
 
 .icon {
